@@ -1,0 +1,35 @@
+.tryon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tryon-canvas {
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Lip buttons container */
+.shade-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Lip-shaped button */
+.lip-button {
+  width: 60px;
+  height: 40px;
+  border-radius: 30px 30px 30px 30px / 25px 25px 25px 25px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.lip-button.active {
+  border-color: black;
+  transform: scale(1.1);
+}
