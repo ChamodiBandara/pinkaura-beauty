@@ -1,18 +1,137 @@
-import { useState } from 'react'
+// import { useState } from 'react'
+// import Camera from '../components/Camera'
+// import SkinToneDisplay from '../components/SkinToneDisplay'
+// import { analyzeSkinTone } from '../services/api'
+
+// function SkinAnalysis() {
+//   const [userName, setUserName] = useState('')
+//   const [capturedImage, setCapturedImage] = useState(null)
+//   const [isAnalyzing, setIsAnalyzing] = useState(false)
+//   const [results, setResults] = useState(null)
+//   const [error, setError] = useState(null)
+
+//   const handleCapture = (imageBlob) => {
+//     setCapturedImage(imageBlob)
+//     setResults(null)
+//     setError(null)
+//   }
+
+//   const handleAnalyze = async () => {
+//     if (!capturedImage) {
+//       alert('Please capture a photo first!')
+//       return
+//     }
+
+//     if (!userName.trim()) {
+//       alert('Please enter your name!')
+//       return
+//     }
+
+//     setIsAnalyzing(true)
+//     setError(null)
+
+//     try {
+//       const result = await analyzeSkinTone(capturedImage, userName)
+//       setResults(result)
+//     } catch (err) {
+//       setError(err.message)
+//     } finally {
+//       setIsAnalyzing(false)
+//     }
+//   }
+
+//   const handleReset = () => {
+//     setUserName('')
+//     setCapturedImage(null)
+//     setResults(null)
+//     setError(null)
+//   }
+
+//   return (
+//     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+//       {/* LEFT SIDE - Input */}
+//       <div className="bg-white rounded-lg shadow-lg p-6">
+//         <h2 className="text-2xl font-bold text-gray-800 mb-4">Step 1: Capture</h2>
+        
+//         {/* Name Input */}
+//         <div className="mb-4">
+//           <label className="block text-sm font-medium text-gray-700 mb-2">
+//             Your Name
+//           </label>
+//           <input
+//             type="text"
+//             value={userName}
+//             onChange={(e) => setUserName(e.target.value)}
+//             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+//             placeholder="Enter your name"
+//           />
+//         </div>
+
+//         {/* Camera Component */}
+//         <Camera onCapture={handleCapture} />
+
+//         {/* Analyze Button */}
+//         <button
+//           onClick={handleAnalyze}
+//           disabled={!capturedImage || isAnalyzing}
+//           className={`w-full mt-6 py-3 px-6 rounded-lg font-bold text-white text-lg
+//             ${capturedImage && !isAnalyzing 
+//               ? 'bg-pink-600 hover:bg-pink-700 cursor-pointer' 
+//               : 'bg-gray-400 cursor-not-allowed'}`}
+//         >
+//           {isAnalyzing ? '⏳ Analyzing...' : '✨ Analyze Skin Tone ✨'}
+//         </button>
+
+//         {/* Error Display */}
+//         {error && (
+//           <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+//             ❌ {error}
+//           </div>
+//         )}
+//       </div>
+
+//       {/* RIGHT SIDE - Results */}
+//       <div className="bg-white rounded-lg shadow-lg p-6">
+//         <h2 className="text-2xl font-bold text-gray-800 mb-4">Step 2: Results</h2>
+        
+//         {!results && !error && (
+//           <div className="flex items-center justify-center h-64 text-gray-400">
+//             <div className="text-center">
+//               <p className="text-xl">🌺</p>
+//               <p className="mt-2">Your results will appear here</p>
+//             </div>
+//           </div>
+//         )}
+
+//         {results && <SkinToneDisplay results={results} onReset={handleReset} />}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default SkinAnalysis
+
+import { useState, useEffect } from 'react'
 import Camera from '../components/Camera'
 import SkinToneDisplay from '../components/SkinToneDisplay'
 import { analyzeSkinTone } from '../services/api'
 
-function SkinAnalysis() {
+function SkinAnalysis({ onAnalysisComplete, existingResults, onReset }) {
   const [userName, setUserName] = useState('')
   const [capturedImage, setCapturedImage] = useState(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
-  const [results, setResults] = useState(null)
+  const [results, setResults] = useState(existingResults)
   const [error, setError] = useState(null)
+
+  // Update results when existingResults change
+  useEffect(() => {
+    if (existingResults) {
+      setResults(existingResults)
+    }
+  }, [existingResults])
 
   const handleCapture = (imageBlob) => {
     setCapturedImage(imageBlob)
-    setResults(null)
     setError(null)
   }
 
@@ -33,6 +152,11 @@ function SkinAnalysis() {
     try {
       const result = await analyzeSkinTone(capturedImage, userName)
       setResults(result)
+      
+      // Share results with parent App component
+      if (onAnalysisComplete) {
+        onAnalysisComplete(result, capturedImage, userName)
+      }
     } catch (err) {
       setError(err.message)
     } finally {
@@ -40,59 +164,92 @@ function SkinAnalysis() {
     }
   }
 
-  const handleReset = () => {
+  const handleLocalReset = () => {
     setUserName('')
     setCapturedImage(null)
     setResults(null)
     setError(null)
+    
+    // Call parent reset
+    if (onReset) {
+      onReset()
+    }
   }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/* LEFT SIDE - Input */}
       <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Step 1: Capture</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          {results ? 'Your Photo' : 'Step 1: Capture'}
+        </h2>
         
-        {/* Name Input */}
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Your Name
-          </label>
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-            placeholder="Enter your name"
-          />
-        </div>
+        {/* Show capture interface only if no results */}
+        {!results && (
+          <>
+            {/* Name Input */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                placeholder="Enter your name"
+              />
+            </div>
 
-        {/* Camera Component */}
-        <Camera onCapture={handleCapture} />
+            {/* Camera Component */}
+            <Camera onCapture={handleCapture} />
 
-        {/* Analyze Button */}
-        <button
-          onClick={handleAnalyze}
-          disabled={!capturedImage || isAnalyzing}
-          className={`w-full mt-6 py-3 px-6 rounded-lg font-bold text-white text-lg
-            ${capturedImage && !isAnalyzing 
-              ? 'bg-pink-600 hover:bg-pink-700 cursor-pointer' 
-              : 'bg-gray-400 cursor-not-allowed'}`}
-        >
-          {isAnalyzing ? '⏳ Analyzing...' : '✨ Analyze Skin Tone ✨'}
-        </button>
+            {/* Analyze Button */}
+            <button
+              onClick={handleAnalyze}
+              disabled={!capturedImage || isAnalyzing}
+              className={`w-full mt-6 py-3 px-6 rounded-lg font-bold text-white text-lg
+                ${capturedImage && !isAnalyzing 
+                  ? 'bg-pink-600 hover:bg-pink-700 cursor-pointer' 
+                  : 'bg-gray-400 cursor-not-allowed'}`}
+            >
+              {isAnalyzing ? '⏳ Analyzing...' : '✨ Analyze Skin Tone ✨'}
+            </button>
 
-        {/* Error Display */}
-        {error && (
-          <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-            ❌ {error}
+            {/* Error Display */}
+            {error && (
+              <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                ❌ {error}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Show captured photo when results exist */}
+        {results && capturedImage && (
+          <div className="space-y-4">
+            <div className="relative">
+              <img 
+                src={URL.createObjectURL(capturedImage)} 
+                alt="Captured" 
+                className="w-full rounded-lg border-4 border-pink-200 shadow-lg"
+              />
+              <div className="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                ✓ ANALYZED
+              </div>
+            </div>
+            <p className="text-center text-sm text-gray-600">
+              Switch to 🎨 <span className="font-bold text-pink-600">Dress Colors</span> tab to see color recommendations
+            </p>
           </div>
         )}
       </div>
 
       {/* RIGHT SIDE - Results */}
       <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Step 2: Results</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          {results ? 'Your Results' : 'Step 2: Results'}
+        </h2>
         
         {!results && !error && (
           <div className="flex items-center justify-center h-64 text-gray-400">
@@ -103,7 +260,7 @@ function SkinAnalysis() {
           </div>
         )}
 
-        {results && <SkinToneDisplay results={results} onReset={handleReset} />}
+        {results && <SkinToneDisplay results={results} onReset={handleLocalReset} />}
       </div>
     </div>
   )
