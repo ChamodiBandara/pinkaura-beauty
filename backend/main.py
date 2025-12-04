@@ -1,34 +1,33 @@
-"""
-Pink Aura Backend - Main Entry Point
-FastAPI application for skin tone analysis
-"""
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes import router
 import uvicorn
 
+# Create FastAPI app
 app = FastAPI(
     title="Pink Aura API",
     description="AI-powered skin tone analysis for Sri Lankan beauty",
     version="1.0.0"
 )
 
-# CORS middleware for React frontend
+# Add CORS middleware here
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",  # include your Vite dev port
+        "http://localhost:3000"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Include API routes
+# Include your API routes after middleware
 app.include_router(router, prefix="/api", tags=["Analysis"])
 
 @app.get("/")
 async def root():
-    """Root endpoint"""
     return {
         "message": "🌺 Welcome to Pink Aura API 🌺",
         "docs": "/docs",
