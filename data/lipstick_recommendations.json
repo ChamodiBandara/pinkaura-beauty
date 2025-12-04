@@ -1,0 +1,2001 @@
+{
+  "1": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Pale Peach", "hex": "#FFE5CC", "description": "Delicate peachy nude for very fair skin"},
+        {"name": "Ivory Cream", "hex": "#FFF5E6", "description": "Soft ivory with golden warmth"}
+      ],
+      "everyday": [
+        {"name": "Soft Coral", "hex": "#FFB6A3", "description": "Light coral for daily wear"},
+        {"name": "Apricot Glow", "hex": "#FBCEB1", "description": "Warm apricot shine"}
+      ],
+      "bold": [
+        {"name": "Bright Coral", "hex": "#FF6B4A", "description": "Vibrant coral statement"},
+        {"name": "Orange Pop", "hex": "#FF4500", "description": "Bold orange-red"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Warm Nude", "hex": "#F5DEB3", "description": "Classic warm nude"},
+        {"name": "Peachy Beige", "hex": "#FFDAB9", "description": "Peach-toned beige"}
+      ],
+      "everyday": [
+        {"name": "Pink Coral", "hex": "#FF9980", "description": "Balanced pink-coral"},
+        {"name": "Soft Peach", "hex": "#FFDAB9", "description": "Gentle peach"}
+      ],
+      "bold": [
+        {"name": "Tomato Red", "hex": "#FF6347", "description": "Warm tomato red"},
+        {"name": "Brick Rose", "hex": "#CB4154", "description": "Deep brick with warmth"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Balanced Nude", "hex": "#F5E6D3", "description": "True balanced nude"},
+        {"name": "Soft Beige", "hex": "#F5DEB3", "description": "Neutral beige"}
+      ],
+      "everyday": [
+        {"name": "Rose Peach", "hex": "#FFB3BA", "description": "Rose with peach"},
+        {"name": "Dusty Pink", "hex": "#DCAE96", "description": "Soft dusty pink"}
+      ],
+      "bold": [
+        {"name": "Pink Red", "hex": "#E63946", "description": "Balanced pink-red"},
+        {"name": "Poppy", "hex": "#E35335", "description": "Warm poppy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "True Nude", "hex": "#F5E6D3", "description": "Perfect neutral nude"},
+        {"name": "Champagne", "hex": "#F7E7CE", "description": "Soft champagne"}
+      ],
+      "everyday": [
+        {"name": "Soft Pink", "hex": "#FFB6C1", "description": "Classic soft pink"},
+        {"name": "Fresh Rose", "hex": "#FF91A4", "description": "Fresh rose"}
+      ],
+      "bold": [
+        {"name": "True Red", "hex": "#FF0000", "description": "Universal classic red"},
+        {"name": "Hot Pink", "hex": "#FF69B4", "description": "Vibrant hot pink"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Cool Nude", "hex": "#F5E6DC", "description": "Cool-toned nude"},
+        {"name": "Pale Rose", "hex": "#FFE4E1", "description": "Delicate pale rose"}
+      ],
+      "everyday": [
+        {"name": "Baby Pink", "hex": "#F4C2C2", "description": "Soft baby pink"},
+        {"name": "Cool Rose", "hex": "#FFB3C6", "description": "Cool rose tone"}
+      ],
+      "bold": [
+        {"name": "Pink Berry", "hex": "#DC143C", "description": "Cool berry pink"},
+        {"name": "Magenta", "hex": "#FF00FF", "description": "Bright magenta"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Pink Nude", "hex": "#FFE4E1", "description": "Soft pink nude"},
+        {"name": "Lavender Nude", "hex": "#F8E8F0", "description": "Cool lavender nude"}
+      ],
+      "everyday": [
+        {"name": "Rose Pink", "hex": "#FF66B2", "description": "Cool rose pink"},
+        {"name": "Orchid", "hex": "#DA70D6", "description": "Soft orchid"}
+      ],
+      "bold": [
+        {"name": "Blue Red", "hex": "#E30B5C", "description": "True blue-based red"},
+        {"name": "Fuchsia", "hex": "#FF1493", "description": "Intense fuchsia"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Icy Pink", "hex": "#FFE4E1", "description": "Very cool pink nude"},
+        {"name": "Lilac Cream", "hex": "#F0E6FA", "description": "Soft lilac cream"}
+      ],
+      "everyday": [
+        {"name": "Cool Pink", "hex": "#FFB6C1", "description": "Fresh cool pink"},
+        {"name": "Violet Rose", "hex": "#EE82EE", "description": "Cool violet-rose"}
+      ],
+      "bold": [
+        {"name": "Cool Crimson", "hex": "#DC143C", "description": "Deep cool crimson"},
+        {"name": "Hot Magenta", "hex": "#FF1493", "description": "Intense magenta"}
+      ]
+    }
+  },
+  "2": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Light Peach", "hex": "#FFE5CC", "description": "Delicate peachy nude"},
+        {"name": "Ivory Silk", "hex": "#FFF5E6", "description": "Soft ivory warmth"}
+      ],
+      "everyday": [
+        {"name": "Coral Dream", "hex": "#FFB6A3", "description": "Light coral everyday"},
+        {"name": "Apricot Kiss", "hex": "#FBCEB1", "description": "Warm apricot"}
+      ],
+      "bold": [
+        {"name": "Coral Burst", "hex": "#FF6B4A", "description": "Vibrant coral"},
+        {"name": "Orange Flame", "hex": "#FF4500", "description": "Bold orange-red"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Warm Sand", "hex": "#F5DEB3", "description": "Sandy warm nude"},
+        {"name": "Peachy Cream", "hex": "#FFDAB9", "description": "Peach cream nude"}
+      ],
+      "everyday": [
+        {"name": "Coral Pink", "hex": "#FF9980", "description": "Balanced coral pink"},
+        {"name": "Gentle Peach", "hex": "#FFDAB9", "description": "Gentle peach shade"}
+      ],
+      "bold": [
+        {"name": "Warm Red", "hex": "#FF6347", "description": "Tomato red"},
+        {"name": "Brick", "hex": "#CB4154", "description": "Deep brick"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Balanced Beige", "hex": "#F5E6D3", "description": "True neutral nude"},
+        {"name": "Soft Nude", "hex": "#F5DEB3", "description": "Soft beige nude"}
+      ],
+      "everyday": [
+        {"name": "Rose Blush", "hex": "#FFB3BA", "description": "Rose with warmth"},
+        {"name": "Dusty Rose", "hex": "#DCAE96", "description": "Dusty pink rose"}
+      ],
+      "bold": [
+        {"name": "Pink Fire", "hex": "#E63946", "description": "Pink-red balance"},
+        {"name": "Poppy Red", "hex": "#E35335", "description": "Warm poppy"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Natural Nude", "hex": "#F5E6D3", "description": "Perfect nude"},
+        {"name": "Champagne Glow", "hex": "#F7E7CE", "description": "Champagne nude"}
+      ],
+      "everyday": [
+        {"name": "Classic Pink", "hex": "#FFB6C1", "description": "Classic pink"},
+        {"name": "Rose Petal", "hex": "#FF91A4", "description": "Fresh rose"}
+      ],
+      "bold": [
+        {"name": "Classic Red", "hex": "#FF0000", "description": "Universal red"},
+        {"name": "Pink Pop", "hex": "#FF69B4", "description": "Hot pink"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Cool Beige", "hex": "#F5E6DC", "description": "Cool nude"},
+        {"name": "Pale Pink", "hex": "#FFE4E1", "description": "Pale rose"}
+      ],
+      "everyday": [
+        {"name": "Baby Pink", "hex": "#F4C2C2", "description": "Baby pink"},
+        {"name": "Rose", "hex": "#FFB3C6", "description": "Cool rose"}
+      ],
+      "bold": [
+        {"name": "Berry Pink", "hex": "#DC143C", "description": "Berry pink"},
+        {"name": "Magenta Pop", "hex": "#FF00FF", "description": "Magenta"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Pink Silk", "hex": "#FFE4E1", "description": "Pink nude"},
+        {"name": "Lavender", "hex": "#F8E8F0", "description": "Lavender nude"}
+      ],
+      "everyday": [
+        {"name": "Rose", "hex": "#FF66B2", "description": "Rose pink"},
+        {"name": "Orchid Bloom", "hex": "#DA70D6", "description": "Orchid"}
+      ],
+      "bold": [
+        {"name": "Blue-Red", "hex": "#E30B5C", "description": "Blue-based red"},
+        {"name": "Fuchsia Flash", "hex": "#FF1493", "description": "Fuchsia"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Icy Rose", "hex": "#FFE4E1", "description": "Icy rose nude"},
+        {"name": "Lilac", "hex": "#F0E6FA", "description": "Lilac"}
+      ],
+      "everyday": [
+        {"name": "Cool Pink", "hex": "#FFB6C1", "description": "Cool pink"},
+        {"name": "Violet", "hex": "#EE82EE", "description": "Violet"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#DC143C", "description": "Cool crimson"},
+        {"name": "Magenta Blast", "hex": "#FF1493", "description": "Magenta"}
+      ]
+    }
+  },
+  "3": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Golden Nude", "hex": "#FFDAB9", "description": "Warm golden nude"},
+        {"name": "Peach Silk", "hex": "#F5DEB3", "description": "Peachy beige"}
+      ],
+      "everyday": [
+        {"name": "Coral Kiss", "hex": "#FF7F50", "description": "Vibrant coral"},
+        {"name": "Cantaloupe", "hex": "#FFA07A", "description": "Soft cantaloupe"}
+      ],
+      "bold": [
+        {"name": "Tangerine", "hex": "#FF8C00", "description": "Bold tangerine"},
+        {"name": "Flame", "hex": "#FF4500", "description": "Orange-red flame"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Sandy Beige", "hex": "#E5C29F", "description": "Sandy warm"},
+        {"name": "Honey", "hex": "#F0E68C", "description": "Honey beige"}
+      ],
+      "everyday": [
+        {"name": "Salmon", "hex": "#FA8072", "description": "Fresh salmon"},
+        {"name": "Terracotta", "hex": "#E2725B", "description": "Warm terracotta"}
+      ],
+      "bold": [
+        {"name": "Tomato", "hex": "#FF6347", "description": "Tomato red"},
+        {"name": "Russet", "hex": "#A0522D", "description": "Deep russet"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Rose Beige", "hex": "#E6C2C2", "description": "Rosy beige"},
+        {"name": "Taupe", "hex": "#D2B48C", "description": "Warm taupe"}
+      ],
+      "everyday": [
+        {"name": "Dusty Rose", "hex": "#C9A9A6", "description": "Dusty rose"},
+        {"name": "Pink Clay", "hex": "#D4A5A5", "description": "Pink clay"}
+      ],
+      "bold": [
+        {"name": "Poppy", "hex": "#E35335", "description": "Warm poppy"},
+        {"name": "Rose Red", "hex": "#C21E56", "description": "Deep rose"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Natural Beige", "hex": "#D2B48C", "description": "Natural beige"},
+        {"name": "Mauve", "hex": "#E0B0FF", "description": "Soft mauve"}
+      ],
+      "everyday": [
+        {"name": "Pink Blush", "hex": "#FFB6C1", "description": "Pink blush"},
+        {"name": "Rosy Brown", "hex": "#BC8F8F", "description": "Rosy brown"}
+      ],
+      "bold": [
+        {"name": "Red", "hex": "#FF0000", "description": "Universal red"},
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Rich rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Nude", "hex": "#E0B0FF", "description": "Cool mauve"},
+        {"name": "Rose Taupe", "hex": "#BC8F8F", "description": "Rose taupe"}
+      ],
+      "everyday": [
+        {"name": "Cool Mauve", "hex": "#DDA0DD", "description": "Soft mauve"},
+        {"name": "Lilac Rose", "hex": "#C8A2C8", "description": "Lilac rose"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#DC143C", "description": "Cool berry"},
+        {"name": "Pink Magenta", "hex": "#FF00FF", "description": "Pink magenta"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Cool Rose", "hex": "#F4C2C2", "description": "Cool rose"},
+        {"name": "Pink Beige", "hex": "#E6C2C2", "description": "Pink beige"}
+      ],
+      "everyday": [
+        {"name": "Rose Pink", "hex": "#FF66B2", "description": "Cool rose"},
+        {"name": "Mauve", "hex": "#E0B0FF", "description": "Soft mauve"}
+      ],
+      "bold": [
+        {"name": "Blue Red", "hex": "#E30B5C", "description": "Blue-based red"},
+        {"name": "Fuchsia", "hex": "#FF00FF", "description": "Bright fuchsia"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Icy Rose", "hex": "#FFE4E1", "description": "Very cool rose"},
+        {"name": "Lilac Nude", "hex": "#E6E6FA", "description": "Lilac nude"}
+      ],
+      "everyday": [
+        {"name": "Cool Pink", "hex": "#FFB6C1", "description": "Fresh cool pink"},
+        {"name": "Violet", "hex": "#EE82EE", "description": "Soft violet"}
+      ],
+      "bold": [
+        {"name": "Cool Crimson", "hex": "#DC143C", "description": "Cool crimson"},
+        {"name": "Hot Magenta", "hex": "#FF1493", "description": "Intense magenta"}
+      ]
+    }
+  },
+  "4": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Peachy Beige", "hex": "#FFDAB9", "description": "Warm peachy beige"},
+        {"name": "Golden Beige", "hex": "#F5DEB3", "description": "Golden beige"}
+      ],
+      "everyday": [
+        {"name": "Coral Pink", "hex": "#FF7F50", "description": "Vibrant coral pink"},
+        {"name": "Cantaloupe Dream", "hex": "#FFA07A", "description": "Soft cantaloupe"}
+      ],
+      "bold": [
+        {"name": "Tangerine Tango", "hex": "#FF8C00", "description": "Bold tangerine"},
+        {"name": "Orange Flame", "hex": "#FF4500", "description": "Bright orange-red"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Warm Sand", "hex": "#E5C29F", "description": "Sandy warm nude"},
+        {"name": "Honey Beige", "hex": "#F0E68C", "description": "Honey beige"}
+      ],
+      "everyday": [
+        {"name": "Salmon Pink", "hex": "#FA8072", "description": "Fresh salmon"},
+        {"name": "Terracotta Rose", "hex": "#E2725B", "description": "Warm terracotta"}
+      ],
+      "bold": [
+        {"name": "Tomato Red", "hex": "#FF6347", "description": "Tomato red"},
+        {"name": "Russet Red", "hex": "#A0522D", "description": "Deep russet"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Rose Beige", "hex": "#E6C2C2", "description": "Rosy beige"},
+        {"name": "Warm Taupe", "hex": "#D2B48C", "description": "Warm taupe"}
+      ],
+      "everyday": [
+        {"name": "Dusty Rose", "hex": "#C9A9A6", "description": "Soft dusty rose"},
+        {"name": "Pink Clay", "hex": "#D4A5A5", "description": "Pink clay tone"}
+      ],
+      "bold": [
+        {"name": "Poppy Red", "hex": "#E35335", "description": "Warm poppy"},
+        {"name": "Rose Red", "hex": "#C21E56", "description": "Deep rose red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Natural Beige", "hex": "#D2B48C", "description": "True natural beige"},
+        {"name": "Soft Mauve", "hex": "#E0B0FF", "description": "Soft mauve nude"}
+      ],
+      "everyday": [
+        {"name": "Pink Blush", "hex": "#FFB6C1", "description": "Fresh pink blush"},
+        {"name": "Rosy Brown", "hex": "#BC8F8F", "description": "Balanced rosy brown"}
+      ],
+      "bold": [
+        {"name": "Classic Red", "hex": "#FF0000", "description": "Universal red"},
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Rich rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Nude", "hex": "#E0B0FF", "description": "Cool mauve nude"},
+        {"name": "Rose Taupe", "hex": "#BC8F8F", "description": "Rose taupe"}
+      ],
+      "everyday": [
+        {"name": "Cool Mauve", "hex": "#DDA0DD", "description": "Soft cool mauve"},
+        {"name": "Lilac Rose", "hex": "#C8A2C8", "description": "Lilac rose"}
+      ],
+      "bold": [
+        {"name": "Berry Blast", "hex": "#DC143C", "description": "Cool berry"},
+        {"name": "Pink Magenta", "hex": "#FF00FF", "description": "Pink magenta"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Cool Rose", "hex": "#F4C2C2", "description": "Cool rose nude"},
+        {"name": "Pink Beige", "hex": "#E6C2C2", "description": "Pink-toned beige"}
+      ],
+      "everyday": [
+        {"name": "Rose Pink", "hex": "#FF66B2", "description": "Cool rose pink"},
+        {"name": "Mauve Dream", "hex": "#E0B0FF", "description": "Soft mauve"}
+      ],
+      "bold": [
+        {"name": "Blue Red", "hex": "#E30B5C", "description": "Blue-based red"},
+        {"name": "Fuchsia Flash", "hex": "#FF00FF", "description": "Bright fuchsia"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Icy Rose", "hex": "#FFE4E1", "description": "Very cool rose"},
+        {"name": "Lilac Nude", "hex": "#E6E6FA", "description": "Lilac nude"}
+      ],
+      "everyday": [
+        {"name": "Cool Pink", "hex": "#FFB6C1", "description": "Fresh cool pink"},
+        {"name": "Violet Bloom", "hex": "#EE82EE", "description": "Soft violet"}
+      ],
+      "bold": [
+        {"name": "Cool Crimson", "hex": "#DC143C", "description": "Cool crimson"},
+        {"name": "Hot Magenta", "hex": "#FF1493", "description": "Intense magenta"}
+      ]
+    }
+  },
+  "5": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Caramel Nude", "hex": "#C19A6B", "description": "Rich caramel"},
+        {"name": "Warm Beige", "hex": "#D4A894", "description": "Warm beige nude"}
+      ],
+      "everyday": [
+        {"name": "Burnt Orange", "hex": "#CC5500", "description": "Deep burnt orange"},
+        {"name": "Terracotta Rose", "hex": "#C67B5C", "description": "Terracotta with rose"}
+      ],
+      "bold": [
+        {"name": "Deep Coral", "hex": "#FF4500", "description": "Intense coral"},
+        {"name": "Brick Red", "hex": "#CB4154", "description": "Deep brick red"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Toffee", "hex": "#C8A589", "description": "Warm toffee nude"},
+        {"name": "Bronze Beige", "hex": "#CD7F32", "description": "Bronzed beige"}
+      ],
+      "everyday": [
+        {"name": "Copper Rose", "hex": "#B87333", "description": "Metallic copper"},
+        {"name": "Ginger", "hex": "#B94700", "description": "Spicy ginger"}
+      ],
+      "bold": [
+        {"name": "Rusty Red", "hex": "#A0522D", "description": "Deep rusty red"},
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Rich mahogany"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Warm Taupe", "hex": "#C9A589", "description": "Balanced warm taupe"},
+        {"name": "Rose Nude", "hex": "#E6C2C2", "description": "Rosy nude"}
+      ],
+      "everyday": [
+        {"name": "Dusty Rose", "hex": "#C9A9A6", "description": "Muted dusty rose"},
+        {"name": "Pink Brown", "hex": "#A0826D", "description": "Pink-brown"}
+      ],
+      "bold": [
+        {"name": "Rose Red", "hex": "#C21E56", "description": "Deep rose red"},
+        {"name": "Warm Berry", "hex": "#8E2D52", "description": "Warm berry"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "True Nude", "hex": "#C9A589", "description": "Perfect neutral nude"},
+        {"name": "Soft Taupe", "hex": "#A0826D", "description": "Soft taupe"}
+      ],
+      "everyday": [
+        {"name": "Mauve Rose", "hex": "#AB6B84", "description": "Balanced mauve-rose"},
+        {"name": "Rosy Mauve", "hex": "#915C83", "description": "Soft rosy mauve"}
+      ],
+      "bold": [
+        {"name": "True Red", "hex": "#DC143C", "description": "Classic crimson"},
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Rich deep rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Taupe", "hex": "#C8A2C8", "description": "Cool mauve taupe"},
+        {"name": "Pink Taupe", "hex": "#B38B6D", "description": "Pink-toned taupe"}
+      ],
+      "everyday": [
+        {"name": "Dusty Mauve", "hex": "#DDA0DD", "description": "Soft dusty mauve"},
+        {"name": "Cool Plum", "hex": "#8E4585", "description": "Cool plum"}
+      ],
+      "bold": [
+        {"name": "Berry Wine", "hex": "#8B008B", "description": "Deep berry wine"},
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Cool red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Cool Taupe", "hex": "#B38B6D", "description": "Cool taupe"},
+        {"name": "Rose Mauve", "hex": "#C8A2C8", "description": "Rose-mauve nude"}
+      ],
+      "everyday": [
+        {"name": "Plum Rose", "hex": "#8E4585", "description": "Plum-rose"},
+        {"name": "Raspberry", "hex": "#E30B5D", "description": "Cool raspberry"}
+      ],
+      "bold": [
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Classic cool red"},
+        {"name": "Deep Berry", "hex": "#8B008B", "description": "Rich berry"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Cool Mauve", "hex": "#DDA0DD", "description": "Very cool mauve"},
+        {"name": "Pink Brown", "hex": "#BC8F8F", "description": "Cool pink-brown"}
+      ],
+      "everyday": [
+        {"name": "Violet Rose", "hex": "#8E4585", "description": "Violet-rose"},
+        {"name": "Cool Plum", "hex": "#8E4585", "description": "Cool plum pink"}
+      ],
+      "bold": [
+        {"name": "Fuchsia Red", "hex": "#C41E3A", "description": "Fuchsia-red"},
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Deep magenta"}
+      ]
+    }
+  },
+  "6": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Caramel", "hex": "#C19A6B", "description": "Rich caramel"},
+        {"name": "Warm Toffee", "hex": "#D4A894", "description": "Warm toffee"}
+      ],
+      "everyday": [
+        {"name": "Burnt Sienna", "hex": "#CC5500", "description": "Deep burnt sienna"},
+        {"name": "Terracotta", "hex": "#C67B5C", "description": "Terracotta"}
+      ],
+      "bold": [
+        {"name": "Coral Red", "hex": "#FF4500", "description": "Coral red"},
+        {"name": "Brick", "hex": "#CB4154", "description": "Brick red"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Toffee Nude", "hex": "#C8A589", "description": "Toffee nude"},
+        {"name": "Bronze", "hex": "#CD7F32", "description": "Bronze"}
+      ],
+      "everyday": [
+        {"name": "Copper", "hex": "#B87333", "description": "Copper"},
+        {"name": "Ginger Spice", "hex": "#B94700", "description": "Ginger"}
+      ],
+      "bold": [
+        {"name": "Russet", "hex": "#A0522D", "description": "Russet"},
+        {"name": "Mahogany Red", "hex": "#8B4513", "description": "Mahogany"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Neutral Taupe", "hex": "#C9A589", "description": "Neutral taupe"},
+        {"name": "Rose Beige", "hex": "#E6C2C2", "description": "Rose beige"}
+      ],
+      "everyday": [
+        {"name": "Dusty Mauve", "hex": "#C9A9A6", "description": "Dusty mauve"},
+        {"name": "Clay Pink", "hex": "#A0826D", "description": "Clay pink"}
+      ],
+      "bold": [
+        {"name": "Rose Crimson", "hex": "#C21E56", "description": "Rose crimson"},
+        {"name": "Berry Rose", "hex": "#8E2D52", "description": "Berry rose"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Perfect Nude", "hex": "#C9A589", "description": "Perfect nude"},
+        {"name": "Taupe", "hex": "#A0826D", "description": "Taupe"}
+      ],
+      "everyday": [
+        {"name": "Mauve", "hex": "#AB6B84", "description": "Mauve"},
+        {"name": "Rose Mauve", "hex": "#915C83", "description": "Rose mauve"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#DC143C", "description": "Crimson"},
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Deep rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Nude", "hex": "#C8A2C8", "description": "Mauve nude"},
+        {"name": "Cool Taupe", "hex": "#B38B6D", "description": "Cool taupe"}
+      ],
+      "everyday": [
+        {"name": "Mauve Pink", "hex": "#DDA0DD", "description": "Mauve pink"},
+        {"name": "Plum", "hex": "#8E4585", "description": "Plum"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#8B008B", "description": "Wine"},
+        {"name": "Berry Red", "hex": "#C41E3A", "description": "Berry red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Rose Taupe", "hex": "#B38B6D", "description": "Rose taupe"},
+        {"name": "Mauve", "hex": "#C8A2C8", "description": "Mauve"}
+      ],
+      "everyday": [
+        {"name": "Plum Pink", "hex": "#8E4585", "description": "Plum pink"},
+        {"name": "Berry", "hex": "#E30B5D", "description": "Berry"}
+      ],
+      "bold": [
+        {"name": "Cool Crimson", "hex": "#C41E3A", "description": "Cool crimson"},
+        {"name": "Berry Wine", "hex": "#8B008B", "description": "Berry wine"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Mauve", "hex": "#DDA0DD", "description": "Purple mauve"},
+        {"name": "Pink Taupe", "hex": "#BC8F8F", "description": "Pink taupe"}
+      ],
+      "everyday": [
+        {"name": "Violet Plum", "hex": "#8E4585", "description": "Violet plum"},
+        {"name": "Plum Rose", "hex": "#8E4585", "description": "Plum rose"}
+      ],
+      "bold": [
+        {"name": "Fuchsia", "hex": "#C41E3A", "description": "Fuchsia"},
+        {"name": "Magenta", "hex": "#8B008B", "description": "Magenta"}
+      ]
+    }
+  },
+  "7": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Caramel Kiss", "hex": "#C19A6B", "description": "Rich caramel"},
+        {"name": "Golden Toffee", "hex": "#B8860B", "description": "Golden toffee"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#CC5500", "description": "Warm cinnamon"},
+        {"name": "Copper Bronze", "hex": "#B87333", "description": "Copper bronze"}
+      ],
+      "bold": [
+        {"name": "Deep Coral", "hex": "#FF4500", "description": "Deep coral"},
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Toffee", "hex": "#C8A589", "description": "Warm toffee"},
+        {"name": "Bronze", "hex": "#CD7F32", "description": "Bronze"}
+      ],
+      "everyday": [
+        {"name": "Rusty Rose", "hex": "#C04000", "description": "Rusty rose"},
+        {"name": "Ginger", "hex": "#B94700", "description": "Ginger"}
+      ],
+      "bold": [
+        {"name": "Paprika", "hex": "#A61C00", "description": "Paprika"},
+        {"name": "Chestnut", "hex": "#954535", "description": "Chestnut"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Neutral Beige", "hex": "#C9A589", "description": "Neutral beige"},
+        {"name": "Soft Brown", "hex": "#A0826D", "description": "Soft brown"}
+      ],
+      "everyday": [
+        {"name": "Mauve Rose", "hex": "#AB6B84", "description": "Mauve rose"},
+        {"name": "Clay", "hex": "#B5651D", "description": "Clay"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#DC143C", "description": "Crimson"},
+        {"name": "Rose Wine", "hex": "#C21E56", "description": "Rose wine"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "True Beige", "hex": "#C9A589", "description": "True beige"},
+        {"name": "Taupe", "hex": "#A0826D", "description": "Taupe"}
+      ],
+      "everyday": [
+        {"name": "Mauve", "hex": "#915C83", "description": "Mauve"},
+        {"name": "Rose Brown", "hex": "#A0826D", "description": "Rose brown"}
+      ],
+      "bold": [
+        {"name": "Ruby", "hex": "#E0115F", "description": "Ruby"},
+        {"name": "Rose", "hex": "#C21E56", "description": "Rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Dusty Mauve", "hex": "#C8A2C8", "description": "Dusty mauve"},
+        {"name": "Cool Taupe", "hex": "#B38B6D", "description": "Cool taupe"}
+      ],
+      "everyday": [
+        {"name": "Plum Rose", "hex": "#8E4585", "description": "Plum rose"},
+        {"name": "Raspberry", "hex": "#E30B5D", "description": "Raspberry"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#8B008B", "description": "Wine"},
+        {"name": "Berry Crimson", "hex": "#C41E3A", "description": "Berry crimson"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Rose Mauve", "hex": "#C8A2C8", "description": "Rose mauve"},
+        {"name": "Pink Taupe", "hex": "#B38B6D", "description": "Pink taupe"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#8E4585", "description": "Plum"},
+        {"name": "Berry", "hex": "#E30B5D", "description": "Berry"}
+      ],
+      "bold": [
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Cool red"},
+        {"name": "Deep Berry", "hex": "#8B008B", "description": "Deep berry"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Mauve", "hex": "#9B6B9E", "description": "Purple mauve"},
+        {"name": "Cool Brown", "hex": "#BC8F8F", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Violet Rose", "hex": "#8E4585", "description": "Violet rose"},
+        {"name": "Cool Plum", "hex": "#8E4585", "description": "Cool plum"}
+      ],
+      "bold": [
+        {"name": "Fuchsia Red", "hex": "#C41E3A", "description": "Fuchsia red"},
+        {"name": "Purple Berry", "hex": "#8B008B", "description": "Purple berry"}
+      ]
+    }
+  },
+  "8": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Golden Caramel", "hex": "#C19A6B", "description": "Golden caramel"},
+        {"name": "Toffee Gold", "hex": "#B8860B", "description": "Toffee gold"}
+      ],
+      "everyday": [
+        {"name": "Burnt Cinnamon", "hex": "#CC5500", "description": "Burnt cinnamon"},
+        {"name": "Bronze Copper", "hex": "#B87333", "description": "Bronze copper"}
+      ],
+      "bold": [
+        {"name": "Coral Fire", "hex": "#FF4500", "description": "Coral fire"},
+        {"name": "Deep Mahogany", "hex": "#8B4513", "description": "Deep mahogany"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Warm Toffee", "hex": "#C8A589", "description": "Warm toffee"},
+        {"name": "Bronze Nude", "hex": "#CD7F32", "description": "Bronze nude"}
+      ],
+      "everyday": [
+        {"name": "Rust Rose", "hex": "#C04000", "description": "Rust rose"},
+        {"name": "Spiced Ginger", "hex": "#B94700", "description": "Spiced ginger"}
+      ],
+      "bold": [
+        {"name": "Deep Paprika", "hex": "#A61C00", "description": "Deep paprika"},
+        {"name": "Rich Chestnut", "hex": "#954535", "description": "Rich chestnut"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Balanced Nude", "hex": "#C9A589", "description": "Balanced nude"},
+        {"name": "Neutral Brown", "hex": "#A0826D", "description": "Neutral brown"}
+      ],
+      "everyday": [
+        {"name": "Rose Mauve", "hex": "#AB6B84", "description": "Rose mauve"},
+        {"name": "Clay Rose", "hex": "#B5651D", "description": "Clay rose"}
+      ],
+      "bold": [
+        {"name": "True Crimson", "hex": "#DC143C", "description": "True crimson"},
+        {"name": "Wine Rose", "hex": "#C21E56", "description": "Wine rose"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Perfect Nude", "hex": "#C9A589", "description": "Perfect nude"},
+        {"name": "Soft Taupe", "hex": "#A0826D", "description": "Soft taupe"}
+      ],
+      "everyday": [
+        {"name": "Soft Mauve", "hex": "#915C83", "description": "Soft mauve"},
+        {"name": "Brown Rose", "hex": "#A0826D", "description": "Brown rose"}
+      ],
+      "bold": [
+        {"name": "Ruby Red", "hex": "#E0115F", "description": "Ruby red"},
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Deep rose"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Cool Mauve", "hex": "#C8A2C8", "description": "Cool mauve"},
+        {"name": "Taupe Rose", "hex": "#B38B6D", "description": "Taupe rose"}
+      ],
+      "everyday": [
+        {"name": "Plum Mauve", "hex": "#8E4585", "description": "Plum mauve"},
+        {"name": "Berry Rose", "hex": "#E30B5D", "description": "Berry rose"}
+      ],
+      "bold": [
+        {"name": "Berry Wine", "hex": "#8B008B", "description": "Berry wine"},
+        {"name": "Cool Crimson", "hex": "#C41E3A", "description": "Cool crimson"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Mauve Rose", "hex": "#C8A2C8", "description": "Mauve rose"},
+        {"name": "Pink Taupe", "hex": "#B38B6D", "description": "Pink taupe"}
+      ],
+      "everyday": [
+        {"name": "Plum Pink", "hex": "#8E4585", "description": "Plum pink"},
+        {"name": "Cool Berry", "hex": "#E30B5D", "description": "Cool berry"}
+      ],
+      "bold": [
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Cool red"},
+        {"name": "Berry Purple", "hex": "#8B008B", "description": "Berry purple"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Nude", "hex": "#9B6B9E", "description": "Purple nude"},
+        {"name": "Cool Taupe", "hex": "#BC8F8F", "description": "Cool taupe"}
+      ],
+      "everyday": [
+        {"name": "Violet Mauve", "hex": "#8E4585", "description": "Violet mauve"},
+        {"name": "Plum Berry", "hex": "#8E4585", "description": "Plum berry"}
+      ],
+      "bold": [
+        {"name": "Fuchsia Wine", "hex": "#C41E3A", "description": "Fuchsia wine"},
+        {"name": "Purple Wine", "hex": "#8B008B", "description": "Purple wine"}
+      ]
+    }
+  },
+  "9": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Deep Caramel", "hex": "#C19A6B", "description": "Deep caramel"},
+        {"name": "Golden Bronze", "hex": "#B8860B", "description": "Golden bronze"}
+      ],
+      "everyday": [
+        {"name": "Warm Cinnamon", "hex": "#8B4513", "description": "Warm cinnamon"},
+        {"name": "Copper Glow", "hex": "#B87333", "description": "Copper glow"}
+      ],
+      "bold": [
+        {"name": "Coral Blaze", "hex": "#FF4500", "description": "Coral blaze"},
+        {"name": "Rich Mahogany", "hex": "#8B4513", "description": "Rich mahogany"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Bronze Toffee", "hex": "#CD7F32", "description": "Bronze toffee"},
+        {"name": "Warm Brown", "hex": "#A0826D", "description": "Warm brown"}
+      ],
+      "everyday": [
+        {"name": "Rust", "hex": "#B7410E", "description": "Rust"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Auburn"}
+      ],
+      "bold": [
+        {"name": "Deep Brick", "hex": "#A0522D", "description": "Deep brick"},
+        {"name": "Chestnut Red", "hex": "#954535", "description": "Chestnut red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Tan Nude", "hex": "#C9A589", "description": "Tan nude"},
+        {"name": "Medium Brown", "hex": "#A0826D", "description": "Medium brown"}
+      ],
+      "everyday": [
+        {"name": "Clay Rose", "hex": "#B5651D", "description": "Clay rose"},
+        {"name": "Brown Mauve", "hex": "#AB6B84", "description": "Brown mauve"}
+      ],
+      "bold": [
+        {"name": "Deep Rose", "hex": "#C21E56", "description": "Deep rose"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Burgundy"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Medium Nude", "hex": "#C9A589", "description": "Medium nude"},
+        {"name": "Taupe Brown", "hex": "#A0826D", "description": "Taupe brown"}
+      ],
+      "everyday": [
+        {"name": "Mauve", "hex": "#915C83", "description": "Mauve"},
+        {"name": "Rose Brown", "hex": "#8B7355", "description": "Rose brown"}
+      ],
+      "bold": [
+        {"name": "True Red", "hex": "#DC143C", "description": "True red"},
+        {"name": "Deep Plum", "hex": "#8B008B", "description": "Deep plum"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Taupe", "hex": "#C8A2C8", "description": "Mauve taupe"},
+        {"name": "Cool Brown", "hex": "#B38B6D", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#8E4585", "description": "Plum"},
+        {"name": "Raspberry", "hex": "#E30B5D", "description": "Raspberry"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Wine"},
+        {"name": "Berry Red", "hex": "#8B008B", "description": "Berry red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Cool Mauve", "hex": "#C8A2C8", "description": "Cool mauve"},
+        {"name": "Plum Brown", "hex": "#6F4C5B", "description": "Plum brown"}
+      ],
+      "everyday": [
+        {"name": "Plum Rose", "hex": "#8E4585", "description": "Plum rose"},
+        {"name": "Berry", "hex": "#E30B5D", "description": "Berry"}
+      ],
+      "bold": [
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Cool red"},
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Nude", "hex": "#9B6B9E", "description": "Purple nude"},
+        {"name": "Cool Cocoa", "hex": "#6B4423", "description": "Cool cocoa"}
+      ],
+      "everyday": [
+        {"name": "Violet Plum", "hex": "#614051", "description": "Violet plum"},
+        {"name": "Cool Wine", "hex": "#722F37", "description": "Cool wine"}
+      ],
+      "bold": [
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Deep magenta"},
+        {"name": "Purple Berry", "hex": "#581845", "description": "Purple berry"}
+      ]
+    }
+  },
+  "10": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Rich Caramel", "hex": "#C19A6B", "description": "Rich caramel"},
+        {"name": "Golden Toffee", "hex": "#B8860B", "description": "Golden toffee"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon Spice", "hex": "#8B4513", "description": "Cinnamon spice"},
+        {"name": "Copper Rose", "hex": "#B87333", "description": "Copper rose"}
+      ],
+      "bold": [
+        {"name": "Deep Coral", "hex": "#FF4500", "description": "Deep coral"},
+        {"name": "Mahogany Wine", "hex": "#8B4513", "description": "Mahogany wine"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Bronze Nude", "hex": "#CD7F32", "description": "Bronze nude"},
+        {"name": "Warm Tan", "hex": "#A0826D", "description": "Warm tan"}
+      ],
+      "everyday": [
+        {"name": "Rust Brown", "hex": "#B7410E", "description": "Rust brown"},
+        {"name": "Auburn Rose", "hex": "#A52A2A", "description": "Auburn rose"}
+      ],
+      "bold": [
+        {"name": "Brick Red", "hex": "#A0522D", "description": "Brick red"},
+        {"name": "Chestnut", "hex": "#954535", "description": "Chestnut"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Neutral Tan", "hex": "#C9A589", "description": "Neutral tan"},
+        {"name": "Soft Brown", "hex": "#A0826D", "description": "Soft brown"}
+      ],
+      "everyday": [
+        {"name": "Clay Rose", "hex": "#B5651D", "description": "Clay rose"},
+        {"name": "Mauve Brown", "hex": "#AB6B84", "description": "Mauve brown"}
+      ],
+      "bold": [
+        {"name": "Rose Wine", "hex": "#C21E56", "description": "Rose wine"},
+        {"name": "Burgundy Red", "hex": "#800020", "description": "Burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "True Nude", "hex": "#C9A589", "description": "True nude"},
+        {"name": "Taupe Brown", "hex": "#A0826D", "description": "Taupe brown"}
+      ],
+      "everyday": [
+        {"name": "Soft Mauve", "hex": "#915C83", "description": "Soft mauve"},
+        {"name": "Rose Brown", "hex": "#8B7355", "description": "Rose brown"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#DC143C", "description": "Crimson"},
+        {"name": "Deep Plum", "hex": "#8B008B", "description": "Deep plum"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Mauve Taupe", "hex": "#C8A2C8", "description": "Mauve taupe"},
+        {"name": "Cool Brown", "hex": "#B38B6D", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Plum Mauve", "hex": "#8E4585", "description": "Plum mauve"},
+        {"name": "Raspberry Rose", "hex": "#E30B5D", "description": "Raspberry rose"}
+      ],
+      "bold": [
+        {"name": "Wine Red", "hex": "#722F37", "description": "Wine red"},
+        {"name": "Berry Wine", "hex": "#8B008B", "description": "Berry wine"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Cool Mauve", "hex": "#C8A2C8", "description": "Cool mauve"},
+        {"name": "Plum Brown", "hex": "#6F4C5B", "description": "Plum brown"}
+      ],
+      "everyday": [
+        {"name": "Plum Rose", "hex": "#8E4585", "description": "Plum rose"},
+        {"name": "Cool Berry", "hex": "#E30B5D", "description": "Cool berry"}
+      ],
+      "bold": [
+        {"name": "Cool Red", "hex": "#C41E3A", "description": "Cool red"},
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Nude", "hex": "#9B6B9E", "description": "Purple nude"},
+        {"name": "Cool Cocoa", "hex": "#6B4423", "description": "Cool cocoa"}
+      ],
+      "everyday": [
+        {"name": "Violet Plum", "hex": "#614051", "description": "Violet plum"},
+        {"name": "Cool Wine", "hex": "#722F37", "description": "Cool wine"}
+      ],
+      "bold": [
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Deep magenta"},
+        {"name": "Blackberry", "hex": "#581845", "description": "Blackberry"}
+      ]
+    }
+  },
+  "11": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Chocolate Nude", "hex": "#7B3F00", "description": "Deep chocolate"},
+        {"name": "Warm Mocha", "hex": "#6F4E37", "description": "Warm mocha"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon Red", "hex": "#8B4513", "description": "Cinnamon red"},
+        {"name": "Auburn Glow", "hex": "#A52A2A", "description": "Auburn glow"}
+      ],
+      "bold": [
+        {"name": "Deep Wine", "hex": "#722F37", "description": "Deep wine"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Espresso"},
+        {"name": "Bronze Brown", "hex": "#8B4513", "description": "Bronze brown"}
+      ],
+      "everyday": [
+        {"name": "Brown Sugar", "hex": "#8B4513", "description": "Brown sugar"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Cognac"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Oxblood"},
+        {"name": "Dark Cherry", "hex": "#991B1B", "description": "Dark cherry"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Deep Nude", "hex": "#8B7355", "description": "Deep nude"},
+        {"name": "Coffee", "hex": "#6F4E37", "description": "Coffee"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Merlot"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Raisin"}
+      ],
+      "bold": [
+        {"name": "Deep Crimson", "hex": "#8B0000", "description": "Deep crimson"},
+        {"name": "Burgundy Wine", "hex": "#800020", "description": "Burgundy wine"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Deep Taupe", "hex": "#8B7355", "description": "Deep taupe"},
+        {"name": "Mocha", "hex": "#6F4E37", "description": "Mocha"}
+      ],
+      "everyday": [
+        {"name": "Plum Wine", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate Rose", "hex": "#7B3F00", "description": "Chocolate rose"}
+      ],
+      "bold": [
+        {"name": "Deep Red", "hex": "#8B0000", "description": "Deep red"},
+        {"name": "Mulberry", "hex": "#614051", "description": "Mulberry"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Deep Mauve", "hex": "#9B6B9E", "description": "Deep mauve"},
+        {"name": "Cool Cocoa", "hex": "#6B4423", "description": "Cool cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum Berry", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine Rose", "hex": "#722F37", "description": "Wine rose"}
+      ],
+      "bold": [
+        {"name": "Dark Cherry", "hex": "#991B1B", "description": "Dark cherry"},
+        {"name": "Purple Plum", "hex": "#581845", "description": "Purple plum"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Purple Nude", "hex": "#9B6B9E", "description": "Purple nude"},
+        {"name": "Cool Brown", "hex": "#6B4423", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Cool Wine", "hex": "#722F37", "description": "Cool wine"}
+      ],
+      "bold": [
+        {"name": "Cherry Wine", "hex": "#991B1B", "description": "Cherry wine"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Deep Purple", "hex": "#9B6B9E", "description": "Deep purple"},
+        {"name": "Plum Brown", "hex": "#6F4C5B", "description": "Plum brown"}
+      ],
+      "everyday": [
+        {"name": "Purple Wine", "hex": "#614051", "description": "Purple wine"},
+        {"name": "Cool Burgundy", "hex": "#722F37", "description": "Cool burgundy"}
+      ],
+      "bold": [
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Deep magenta"},
+        {"name": "Blackberry", "hex": "#581845", "description": "Blackberry"}
+      ]
+    }
+  },
+  "12": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Rich Chocolate", "hex": "#7B3F00", "description": "Rich chocolate"},
+        {"name": "Warm Espresso", "hex": "#6F4E37", "description": "Warm espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon Spice", "hex": "#8B4513", "description": "Cinnamon spice"},
+        {"name": "Auburn Wine", "hex": "#A52A2A", "description": "Auburn wine"}
+      ],
+      "bold": [
+        {"name": "Wine Red", "hex": "#722F37", "description": "Wine red"},
+        {"name": "Rich Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee Bean", "hex": "#6F4E37", "description": "Coffee bean"},
+        {"name": "Warm Cocoa", "hex": "#6B4423", "description": "Warm cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany"},
+        {"name": "Cognac Red", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood Red", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Deep Cherry", "hex": "#991B1B", "description": "Deep cherry"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Deep Espresso", "hex": "#6F4E37", "description": "Deep espresso"},
+        {"name": "Rich Mocha", "hex": "#6B4423", "description": "Rich mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot Brown", "hex": "#73343A", "description": "Merlot brown"},
+        {"name": "Raisin Wine", "hex": "#6F4C5B", "description": "Raisin wine"}
+      ],
+      "bold": [
+        {"name": "Deep Crimson", "hex": "#8B0000", "description": "Deep crimson"},
+        {"name": "Velvet Burgundy", "hex": "#800020", "description": "Velvet burgundy"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Dark Mocha", "hex": "#6F4E37", "description": "Dark mocha"},
+        {"name": "Deep Cocoa", "hex": "#6B4423", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum Wine", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate Plum", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Garnet"},
+        {"name": "Dark Plum", "hex": "#614051", "description": "Dark plum"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple Cocoa", "hex": "#9B6B9E", "description": "Purple cocoa"},
+        {"name": "Cool Espresso", "hex": "#6B4423", "description": "Cool espresso"}
+      ],
+      "everyday": [
+        {"name": "Plum Berry", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine Plum", "hex": "#722F37", "description": "Wine plum"}
+      ],
+      "bold": [
+        {"name": "Deep Cherry", "hex": "#991B1B", "description": "Deep cherry"},
+        {"name": "Purple Wine", "hex": "#581845", "description": "Purple wine"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Purple Brown", "hex": "#9B6B9E", "description": "Purple brown"},
+        {"name": "Cool Chocolate", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Cool Wine", "hex": "#722F37", "description": "Cool wine"}
+      ],
+      "bold": [
+        {"name": "Berry Wine", "hex": "#991B1B", "description": "Berry wine"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Deep Purple", "hex": "#9B6B9E", "description": "Deep purple nude"},
+        {"name": "Plum Cocoa", "hex": "#6F4C5B", "description": "Plum cocoa"}
+      ],
+      "everyday": [
+        {"name": "Purple Wine", "hex": "#614051", "description": "Purple wine"},
+        {"name": "Cool Burgundy", "hex": "#722F37", "description": "Cool burgundy"}
+      ],
+      "bold": [
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Deep magenta"},
+        {"name": "Blackberry Wine", "hex": "#581845", "description": "Blackberry wine"}
+      ]
+    }
+  },
+  "13": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Deep Chocolate", "hex": "#7B3F00", "description": "Rich chocolate nude"},
+        {"name": "Warm Espresso", "hex": "#6F4E37", "description": "Warm espresso brown"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon Red", "hex": "#8B4513", "description": "Cinnamon red"},
+        {"name": "Auburn Wine", "hex": "#A52A2A", "description": "Auburn wine"}
+      ],
+      "bold": [
+        {"name": "Deep Wine", "hex": "#722F37", "description": "Deep wine red"},
+        {"name": "Rich Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee Bean", "hex": "#6F4E37", "description": "Coffee bean brown"},
+        {"name": "Warm Cocoa", "hex": "#6B4423", "description": "Warm cocoa nude"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany brown"},
+        {"name": "Cognac Red", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood Red", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Deep Cherry", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Deep Espresso", "hex": "#6F4E37", "description": "Deep espresso nude"},
+        {"name": "Rich Mocha", "hex": "#6B4423", "description": "Rich mocha brown"}
+      ],
+      "everyday": [
+        {"name": "Merlot Brown", "hex": "#73343A", "description": "Merlot brown"},
+        {"name": "Raisin Wine", "hex": "#6F4C5B", "description": "Raisin wine"}
+      ],
+      "bold": [
+        {"name": "Deep Crimson", "hex": "#8B0000", "description": "Deep crimson red"},
+        {"name": "Velvet Burgundy", "hex": "#800020", "description": "Velvet burgundy"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Dark Mocha", "hex": "#6F4E37", "description": "Dark mocha nude"},
+        {"name": "Deep Cocoa", "hex": "#6B4423", "description": "Deep cocoa brown"}
+      ],
+      "everyday": [
+        {"name": "Plum Wine", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate Plum", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet Red", "hex": "#733635", "description": "Garnet red"},
+        {"name": "Dark Plum", "hex": "#614051", "description": "Dark plum"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple Cocoa", "hex": "#9B6B9E", "description": "Purple cocoa nude"},
+        {"name": "Cool Espresso", "hex": "#6B4423", "description": "Cool espresso"}
+      ],
+      "everyday": [
+        {"name": "Plum Berry", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine Plum", "hex": "#722F37", "description": "Wine plum"}
+      ],
+      "bold": [
+        {"name": "Cherry Red", "hex": "#991B1B", "description": "Cool cherry red"},
+        {"name": "Purple Wine", "hex": "#581845", "description": "Purple wine red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Purple Brown", "hex": "#9B6B9E", "description": "Purple brown nude"},
+        {"name": "Cool Chocolate", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Cool Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry Red", "hex": "#991B1B", "description": "Cool berry red"},
+        {"name": "Eggplant Red", "hex": "#614051", "description": "Eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Mauve Brown", "hex": "#9B6B9E", "description": "Light mauve brown nude"},
+        {"name": "Cool Taupe", "hex": "#8B7D7B", "description": "Cool taupe nude"}
+      ],
+      "everyday": [
+        {"name": "Rose Plum", "hex": "#8E4585", "description": "Rose plum"},
+        {"name": "Berry Rose", "hex": "#C41E3A", "description": "Cool berry rose red"}
+      ],
+      "bold": [
+        {"name": "Ruby Red", "hex": "#E0115F", "description": "Vibrant ruby red"},
+        {"name": "Fuchsia Berry", "hex": "#C154C1", "description": "Bright fuchsia berry"}
+      ]
+    }
+  },
+  "14": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Rich Chocolate", "hex": "#7B3F00", "description": "Rich chocolate nude"},
+        {"name": "Warm Espresso", "hex": "#6F4E37", "description": "Warm espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon Wine", "hex": "#8B4513", "description": "Cinnamon wine"},
+        {"name": "Auburn Glow", "hex": "#A52A2A", "description": "Auburn glow"}
+      ],
+      "bold": [
+        {"name": "Wine Red", "hex": "#722F37", "description": "Deep wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee Brown", "hex": "#6F4E37", "description": "Coffee brown nude"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Warm cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany Red", "hex": "#8B4513", "description": "Mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Cherry Red", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso Nude", "hex": "#6F4E37", "description": "Deep espresso nude"},
+        {"name": "Mocha Brown", "hex": "#6B4423", "description": "Rich mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Raisin wine"}
+      ],
+      "bold": [
+        {"name": "Crimson Red", "hex": "#8B0000", "description": "Deep crimson red"},
+        {"name": "Burgundy Red", "hex": "#800020", "description": "Velvet burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Dark Mocha", "hex": "#6F4E37", "description": "Dark mocha nude"},
+        {"name": "Cocoa Brown", "hex": "#6B4423", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum Wine", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate Plum", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet Red", "hex": "#733635", "description": "Garnet red"},
+        {"name": "Plum Red", "hex": "#614051", "description": "Dark plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple Nude", "hex": "#9B6B9E", "description": "Purple nude"},
+        {"name": "Cool Brown", "hex": "#6B4423", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Plum Berry", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine Rose", "hex": "#722F37", "description": "Wine rose red"}
+      ],
+      "bold": [
+        {"name": "Cherry Wine", "hex": "#991B1B", "description": "Cool cherry red"},
+        {"name": "Purple Red", "hex": "#581845", "description": "Purple wine red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum Brown", "hex": "#9B6B9E", "description": "Plum brown nude"},
+        {"name": "Chocolate Mauve", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Deep Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Wine Red", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry Red", "hex": "#991B1B", "description": "Cool berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Deep Mauve", "hex": "#8B6B8B", "description": "Deep mauve nude"},
+        {"name": "Plum Taupe", "hex": "#7D6B6B", "description": "Plum taupe nude"}
+      ],
+      "everyday": [
+        {"name": "Violet Plum", "hex": "#7D4E7D", "description": "Violet plum"},
+        {"name": "Crimson Rose", "hex": "#DC143C", "description": "Cool crimson red"}
+      ],
+      "bold": [
+        {"name": "Magenta Red", "hex": "#C71585", "description": "Deep magenta red"},
+        {"name": "Berry Wine", "hex": "#990033", "description": "Rich berry wine"}
+      ]
+    }
+  },
+  "15": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Deep Chocolate", "hex": "#7B3F00", "description": "Deep chocolate nude"},
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Warm espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Deep wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#6F4E37", "description": "Coffee nude"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Warm cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Deep espresso"},
+        {"name": "Mocha", "hex": "#6B4423", "description": "Rich mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Deep crimson red"},
+        {"name": "Burgundy Wine", "hex": "#800020", "description": "Burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#6F4E37", "description": "Dark mocha"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Dark plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple Brown", "hex": "#9B6B9E", "description": "Purple brown"},
+        {"name": "Cool Brown", "hex": "#6B4423", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Cool cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#9B6B9E", "description": "Plum nude"},
+        {"name": "Chocolate", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Cool berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple Brown", "hex": "#7D5B7D", "description": "Purple brown nude"},
+        {"name": "Cool Mocha", "hex": "#6B5B5B", "description": "Cool mocha nude"}
+      ],
+      "everyday": [
+        {"name": "Deep Plum", "hex": "#6B4B6B", "description": "Deep plum"},
+        {"name": "Wine Red", "hex": "#A52A4A", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Deep Magenta", "hex": "#8B008B", "description": "Intense deep magenta"},
+        {"name": "Blackberry", "hex": "#700040", "description": "Rich blackberry"}
+      ]
+    }
+  },
+  "16": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Chocolate", "hex": "#7B3F00", "description": "Rich chocolate"},
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Warm espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Deep wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#6F4E37", "description": "Coffee nude"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Warm cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Deep espresso"},
+        {"name": "Mocha", "hex": "#6B4423", "description": "Rich mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Deep crimson red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#6F4E37", "description": "Dark mocha"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Dark plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#9B6B9E", "description": "Purple brown"},
+        {"name": "Brown", "hex": "#6B4423", "description": "Cool brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Cool cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#9B6B9E", "description": "Plum nude"},
+        {"name": "Chocolate", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Cool berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Deep Purple", "hex": "#6B4B6B", "description": "Deep purple nude"},
+        {"name": "Plum Cocoa", "hex": "#5B4B5B", "description": "Plum cocoa nude"}
+      ],
+      "everyday": [
+        {"name": "Purple Wine", "hex": "#5B3B5B", "description": "Purple wine"},
+        {"name": "Burgundy Red", "hex": "#8B2252", "description": "Cool burgundy red"}
+      ],
+      "bold": [
+        {"name": "Dark Magenta", "hex": "#7D0552", "description": "Dark magenta red"},
+        {"name": "Black Cherry", "hex": "#581845", "description": "Black cherry"}
+      ]
+    }
+  },
+  "17": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Chocolate", "hex": "#7B3F00", "description": "Rich chocolate"},
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Warm espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Deep wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Rich burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#6F4E37", "description": "Coffee nude"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Warm cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#6F4E37", "description": "Deep espresso"},
+        {"name": "Mocha", "hex": "#6B4423", "description": "Rich mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Deep crimson red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#6F4E37", "description": "Dark mocha"},
+        {"name": "Cocoa", "hex": "#6B4423", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Plum wine"},
+        {"name": "Chocolate", "hex": "#7B3F00", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Dark plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#9B6B9E", "description": "Purple brown"},
+        {"name": "Brown", "hex": "#6B4423", "description": "Cool brown"}
+      ],
+      "everyday": [{"name": "Plum", "hex": "#614051", "description": "Plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Cool cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#9B6B9E", "description": "Plum nude"},
+        {"name": "Chocolate", "hex": "#6B4423", "description": "Cool chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Cool berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Eggplant red"}
+      ]
+    },
+     "Very Cool": {
+      "nude": [
+        {"name": "Midnight Purple", "hex": "#5B3B5B", "description": "Midnight purple nude"},
+        {"name": "Dark Plum", "hex": "#4B3B4B", "description": "Dark plum nude"}
+      ],
+      "everyday": [
+        {"name": "Black Plum", "hex": "#4B2B4B", "description": "Black plum"},
+        {"name": "Dark Wine Red", "hex": "#722F37", "description": "Dark wine red"}
+      ],
+      "bold": [
+        {"name": "Deep Crimson", "hex": "#660033", "description": "Deep crimson red"},
+        {"name": "Black Berry", "hex": "#4B0033", "description": "Intense black berry"}
+      ]
+    }
+  },
+  "18": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Deep Chocolate", "hex": "#5D4037", "description": "Very deep chocolate"},
+        {"name": "Espresso", "hex": "#4E342E", "description": "Dark espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Rich cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Deep auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Intense wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Deep burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#5D4037", "description": "Deep coffee nude"},
+        {"name": "Cocoa", "hex": "#4E342E", "description": "Dark cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Rich mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Deep cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Intense oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Deep cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#5D4037", "description": "Very deep espresso"},
+        {"name": "Mocha", "hex": "#4E342E", "description": "Dark mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Deep merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Dark raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Intense crimson red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Rich burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#5D4037", "description": "Very dark mocha"},
+        {"name": "Cocoa", "hex": "#4E342E", "description": "Deep cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Deep plum wine"},
+        {"name": "Chocolate", "hex": "#5D4037", "description": "Chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Deep garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Rich plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#6F4C5B", "description": "Deep purple brown"},
+        {"name": "Brown", "hex": "#4E342E", "description": "Cool dark brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Rich plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Deep wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Intense cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Deep purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#6F4C5B", "description": "Deep plum nude"},
+        {"name": "Chocolate", "hex": "#4E342E", "description": "Cool dark chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Rich deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Intense berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Deep eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#6F4C5B", "description": "Very deep purple nude"},
+        {"name": "Plum", "hex": "#5D3954", "description": "Dark plum nude"}
+      ],
+      "everyday": [
+        {"name": "Purple", "hex": "#614051", "description": "Deep purple wine"},
+        {"name": "Burgundy", "hex": "#722F37", "description": "Cool burgundy red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Intense crimson red"},
+        {"name": "Blackberry", "hex": "#581845", "description": "Deep blackberry red"}
+      ]
+    }
+  },
+  "19": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Chocolate", "hex": "#3E2723", "description": "Ultra deep chocolate"},
+        {"name": "Espresso", "hex": "#2C1810", "description": "Darkest espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Vibrant cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Rich auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Bold wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Intense burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#3E2723", "description": "Ultra deep coffee"},
+        {"name": "Cocoa", "hex": "#2C1810", "description": "Darkest cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Vibrant mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Rich cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Bold oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Intense cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#3E2723", "description": "Ultra deep espresso"},
+        {"name": "Mocha", "hex": "#2C1810", "description": "Darkest mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Rich merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Deep raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Bold crimson red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Intense burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#3E2723", "description": "Ultra dark mocha"},
+        {"name": "Cocoa", "hex": "#2C1810", "description": "Deepest cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Rich plum wine"},
+        {"name": "Chocolate", "hex": "#3E2723", "description": "Deep chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Bold garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Intense plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#5D3954", "description": "Very deep purple brown"},
+        {"name": "Brown", "hex": "#2C1810", "description": "Cool deepest brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Intense plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Rich wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Bold cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Intense purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Very deep plum nude"},
+        {"name": "Chocolate", "hex": "#2C1810", "description": "Cool darkest chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Intense deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Bold berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Intense eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#5D3954", "description": "Ultra deep purple nude"},
+        {"name": "Plum", "hex": "#4A2545", "description": "Darkest plum nude"}
+      ],
+      "everyday": [
+        {"name": "Purple", "hex": "#614051", "description": "Intense purple wine"},
+        {"name": "Burgundy", "hex": "#722F37", "description": "Cool burgundy red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Bold crimson red"},
+        {"name": "Blackberry", "hex": "#581845", "description": "Intense blackberry red"}
+      ]
+    }
+  },
+  "20": {
+    "Very Warm": {
+      "nude": [
+        {"name": "Chocolate", "hex": "#1B0F0A", "description": "Deepest chocolate"},
+        {"name": "Espresso", "hex": "#0D0706", "description": "Ultra dark espresso"}
+      ],
+      "everyday": [
+        {"name": "Cinnamon", "hex": "#8B4513", "description": "Bold cinnamon red"},
+        {"name": "Auburn", "hex": "#A52A2A", "description": "Vibrant auburn red"}
+      ],
+      "bold": [
+        {"name": "Wine", "hex": "#722F37", "description": "Rich wine red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Bold burgundy"}
+      ]
+    },
+    "Warm": {
+      "nude": [
+        {"name": "Coffee", "hex": "#1B0F0A", "description": "Deepest coffee"},
+        {"name": "Cocoa", "hex": "#0D0706", "description": "Ultra dark cocoa"}
+      ],
+      "everyday": [
+        {"name": "Mahogany", "hex": "#8B4513", "description": "Bold mahogany red"},
+        {"name": "Cognac", "hex": "#9A463D", "description": "Vibrant cognac red"}
+      ],
+      "bold": [
+        {"name": "Oxblood", "hex": "#800020", "description": "Rich oxblood red"},
+        {"name": "Cherry", "hex": "#991B1B", "description": "Bold cherry red"}
+      ]
+    },
+    "Neutral Warm": {
+      "nude": [
+        {"name": "Espresso", "hex": "#1B0F0A", "description": "Deepest espresso"},
+        {"name": "Mocha", "hex": "#0D0706", "description": "Ultra dark mocha"}
+      ],
+      "everyday": [
+        {"name": "Merlot", "hex": "#73343A", "description": "Bold merlot red"},
+        {"name": "Raisin", "hex": "#6F4C5B", "description": "Rich raisin red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Rich crimson red"},
+        {"name": "Burgundy", "hex": "#800020", "description": "Bold burgundy red"}
+      ]
+    },
+    "Neutral": {
+      "nude": [
+        {"name": "Mocha", "hex": "#1B0F0A", "description": "Deepest mocha"},
+        {"name": "Cocoa", "hex": "#0D0706", "description": "Ultra dark cocoa"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#5D3954", "description": "Bold plum wine"},
+        {"name": "Chocolate", "hex": "#1B0F0A", "description": "Deep chocolate plum"}
+      ],
+      "bold": [
+        {"name": "Garnet", "hex": "#733635", "description": "Rich garnet red"},
+        {"name": "Plum", "hex": "#614051", "description": "Bold plum red"}
+      ]
+    },
+    "Neutral Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#4A2545", "description": "Deepest purple brown"},
+        {"name": "Brown", "hex": "#0D0706", "description": "Cool ultra dark brown"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Bold plum berry"},
+        {"name": "Wine", "hex": "#722F37", "description": "Rich wine red"}
+      ],
+      "bold": [
+        {"name": "Cherry", "hex": "#991B1B", "description": "Rich cherry red"},
+        {"name": "Purple", "hex": "#581845", "description": "Bold purple red"}
+      ]
+    },
+    "Cool": {
+      "nude": [
+        {"name": "Plum", "hex": "#4A2545", "description": "Deepest plum nude"},
+        {"name": "Chocolate", "hex": "#0D0706", "description": "Cool ultra dark chocolate"}
+      ],
+      "everyday": [
+        {"name": "Plum", "hex": "#614051", "description": "Bold deep plum"},
+        {"name": "Wine", "hex": "#722F37", "description": "Cool wine red"}
+      ],
+      "bold": [
+        {"name": "Berry", "hex": "#991B1B", "description": "Rich berry red"},
+        {"name": "Eggplant", "hex": "#614051", "description": "Bold eggplant red"}
+      ]
+    },
+    "Very Cool": {
+      "nude": [
+        {"name": "Purple", "hex": "#4A2545", "description": "Deepest purple nude"},
+        {"name": "Plum", "hex": "#2E1A2B", "description": "Ultra dark plum nude"}
+      ],
+      "everyday": [
+        {"name": "Purple", "hex": "#614051", "description": "Bold purple wine"},
+        {"name": "Burgundy", "hex": "#722F37", "description": "Cool burgundy red"}
+      ],
+      "bold": [
+        {"name": "Crimson", "hex": "#8B0000", "description": "Rich crimson red"},
+        {"name": "Blackberry", "hex": "#581845", "description": "Bold blackberry red"}
+      ]
+    }
+  }
+}

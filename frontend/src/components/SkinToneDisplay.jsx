@@ -64,6 +64,83 @@ function SkinToneDisplay({ results, onReset }) {
       >
         🔄 Analyze Another Person
       </button>
+
+      {/* Lipstick Recommendations */}
+      {results.lipstick_recommendation && (
+        <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+          <p className="text-sm font-medium text-gray-600">Lipstick Recommendations</p>
+
+          <p className="text-xs text-gray-500 mt-2">{results.lipstick_recommendation.explanation}</p>
+
+          {results.lipstick_recommendation.recommendations?.nude && (
+            <>
+              <p className="mt-3 font-semibold">Nude Shades</p>
+              <ul className="list-disc ml-5">
+                {results.lipstick_recommendation.recommendations.nude.map((l) => (
+                  <li key={l.name} className="text-sm">
+                    <span
+                      style={{ display: 'inline-block', width: 14, height: 14, background: l.hex, marginRight: 8, verticalAlign: 'middle', borderRadius: 2 }}
+                    />
+                    {l.name} — <span className="text-gray-600">{l.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {/* everyday */}
+          {results.lipstick_recommendation.recommendations?.everyday && (
+            <>
+              <p className="mt-3 font-semibold">Everyday Shades</p>
+              <ul className="list-disc ml-5">
+                {results.lipstick_recommendation.recommendations.everyday.map((l) => (
+                  <li key={l.name} className="text-sm">
+                    <span
+                      style={{ display: 'inline-block', width: 14, height: 14, background: l.hex, marginRight: 8, verticalAlign: 'middle', borderRadius: 2 }}
+                    />
+                    {l.name} — <span className="text-gray-600">{l.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {/* bold */}
+          {results.lipstick_recommendation.recommendations?.bold && (
+            <>
+              <p className="mt-3 font-semibold">Bold Shades</p>
+              <ul className="list-disc ml-5">
+                {results.lipstick_recommendation.recommendations.bold.map((l) => (
+                  <li key={l.name} className="text-sm">
+                    <span
+                      style={{ display: 'inline-block', width: 14, height: 14, background: l.hex, marginRight: 8, verticalAlign: 'middle', borderRadius: 2 }}
+                    />
+                    {l.name} — <span className="text-gray-600">{l.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {/* Tips & Avoid */}
+          {results.lipstick_recommendation.tips && (
+            <div className="mt-3">
+              <p className="font-semibold">Application Tips</p>
+              <ul className="list-disc ml-5 text-sm">
+                {results.lipstick_recommendation.tips.map((t, i) => <li key={i}>{t}</li>)}
+              </ul>
+            </div>
+          )}
+          {results.lipstick_recommendation.avoid && (
+            <div className="mt-3">
+              <p className="font-semibold">Colors to Avoid</p>
+              <ul className="list-disc ml-5 text-sm">
+                {results.lipstick_recommendation.avoid.map((a, i) => <li key={i}>{a}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
