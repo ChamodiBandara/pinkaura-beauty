@@ -1,0 +1,9 @@
+{
+  "shades": [
+    {"name": "Crimson", "hex": "#C9003A", "rgb": [201, 0, 58]},
+    {"name": "Velvet Brown", "hex": "#7B3F00", "rgb": [123, 63, 0]},
+    {"name": "Soft Pink", "hex": "#FFB6C1", "rgb": [255, 182, 193]},
+    {"name": "Rose Red", "hex": "#FF4D6D", "rgb": [255, 77, 109]},
+    {"name": "Peach", "hex": "#FFDAB9", "rgb": [255, 218, 185]}
+  ]
+}
