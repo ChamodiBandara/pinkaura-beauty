@@ -1,6 +1,7 @@
 """
-Enhanced Skin Tone Classifier
+Enhanced Skin Tone Classifier with Foundation Recommendations
 Combines LAB color space analysis with GitHub Models API validation
+and personalized foundation shade recommendations
 """
 
 import numpy as np
@@ -16,12 +17,22 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.color_theory import rgb_to_lab, calculate_ita_angle, detect_undertone
 from utils.sri_lankan_tones import get_categories, classify_by_L_value
 
+# ✨ NEW: Import foundation recommendation service
+try:
+    from services.foundation_recommendation import FoundationRecommendationService
+    FOUNDATION_SERVICE_AVAILABLE = True
+except ImportError:
+    FOUNDATION_SERVICE_AVAILABLE = False
+    print("⚠️  Foundation recommendation service not available")
+
+
 class EnhancedSkinToneClassifier:
     """
     Hybrid skin tone classifier using:
     1. LAB color space analysis (scientific)
     2. GitHub Models API for validation (AI-powered)
     3. 20 Sri Lankan categories
+    4. ✨ NEW: Foundation shade recommendations
     """
     
     def __init__(self, github_token: str = None):
@@ -37,6 +48,17 @@ class EnhancedSkinToneClassifier:
             print("   ⚠️  GitHub Models API disabled (no token)")
         
         self.categories = get_categories()
+        
+        # ✨ NEW: Initialize foundation recommendation service
+        if FOUNDATION_SERVICE_AVAILABLE:
+            try:
+                self.foundation_service = FoundationRecommendationService()
+                print("   💄 Foundation Recommendation Service enabled")
+            except Exception as e:
+                self.foundation_service = None
+                print(f"   ⚠️  Foundation service initialization failed: {e}")
+        else:
+            self.foundation_service = None
     
     def validate_with_github_models(self, avg_rgb: np.ndarray, category: Dict) -> Dict:
         """Validate classification using GitHub Models API"""
@@ -117,8 +139,52 @@ Format: VALID|95|The RGB values indicate a medium-tan complexion consistent with
                 'note': f'AI validation error: {str(e)}'
             }
     
+    def get_foundation_recommendations(self, category: Dict, undertone: Dict, L: float, a: float, b: float) -> Dict:
+        """
+        ✨ NEW: Get foundation recommendations based on skin analysis
+        
+        Args:
+            category: Category information from classify_by_L_value
+            undertone: Undertone information from detect_undertone
+            L: LAB L* value
+            a: LAB a* value
+            b: LAB b* value
+            
+        Returns:
+            Foundation recommendations or None if service unavailable
+        """
+        if not self.foundation_service:
+            return None
+        
+        try:
+            recommendations = self.foundation_service.get_recommendations(
+                category_number=category['category_number'],
+                undertone=undertone['undertone'],
+                category_name=category['category_name']
+            )
+            
+            # Add skin analysis values for reference
+            recommendations['skin_analysis'] = {
+                'L_value': round(float(L), 2),
+                'a_value': round(float(a), 2),
+                'b_value': round(float(b), 2),
+                'undertone_score': undertone.get('score', 0),
+                'undertone_confidence': undertone.get('confidence', 0)
+            }
+            
+            print(f"   💄 Foundation Recommendations: {len(recommendations.get('recommendations', []))} matches found")
+            
+            return recommendations
+            
+        except Exception as e:
+            print(f"   ⚠️  Foundation recommendation failed: {e}")
+            return {
+                'error': str(e),
+                'note': 'Foundation recommendations unavailable'
+            }
+    
     def create_user_profile(self, skin_pixels: np.ndarray, user_name: str = None) -> Dict:
-        """Create complete user profile with hybrid classification"""
+        """Create complete user profile with hybrid classification and foundation recommendations"""
         print(f"\n🔬 Analyzing {len(skin_pixels)} skin pixels...")
         
         # Calculate average color
@@ -137,6 +203,15 @@ Format: VALID|95|The RGB values indicate a medium-tan complexion consistent with
         
         # Validate with GitHub Models
         validation = self.validate_with_github_models(avg_rgb, category)
+        
+        # ✨ NEW: Get foundation recommendations
+        foundation_recommendations = self.get_foundation_recommendations(
+            category=category,
+            undertone=undertone,
+            L=L,
+            a=a,
+            b=b
+        )
         
         # Create hex color
         hex_color = "#{:02x}{:02x}{:02x}".format(
@@ -181,19 +256,27 @@ Format: VALID|95|The RGB values indicate a medium-tan complexion consistent with
             'ai_validation': validation,
             'analysis_metadata': {
                 'num_pixels_analyzed': len(skin_pixels),
-                'method': 'Hybrid (Color Theory + GitHub Models)',
-                'analyzer_version': '2.0'
+                'method': 'Hybrid (Color Theory + GitHub Models + Foundation Recommendations)',
+                'analyzer_version': '2.1',  # Updated version
+                'foundation_service': 'enabled' if foundation_recommendations else 'disabled'
             }
         }
+        
+        # ✨ NEW: Add foundation recommendations to profile
+        if foundation_recommendations:
+            profile['foundation_recommendations'] = foundation_recommendations
         
         print("✅ Analysis complete!")
         print(f"   Category: #{category['category_number']} - {category['category_name']}")
         print(f"   Undertone: {undertone['undertone']}")
         if validation['validated']:
             print(f"   AI Validation: ✓ Confirmed ({validation['confidence']*100:.0f}% confidence)")
+        if foundation_recommendations and 'recommendations' in foundation_recommendations:
+            print(f"   Foundation Matches: {len(foundation_recommendations['recommendations'])} recommended")
         
         return profile
-    
+
+
 def _to_serializable(obj):
     """Recursively convert numpy types/arrays and other common non-serializables to Python native types for JSON."""
     # Numpy scalar
@@ -237,8 +320,23 @@ def _to_serializable(obj):
     except Exception:
         return None
 
+
 def analyze_skin(skin_pixels: np.ndarray, user_name: str = None) -> Dict:
-    """Analyze skin tone and return serializable results"""
+    """
+    Analyze skin tone and return serializable results with foundation recommendations
+    
+    Args:
+        skin_pixels: Array of skin pixel RGB values
+        user_name: Optional user name for the profile
+        
+    Returns:
+        Complete analysis including:
+        - Skin tone category (1-20)
+        - Undertone (Very Cool to Very Warm)
+        - LAB color values
+        - AI validation (if GitHub Models enabled)
+        - ✨ Foundation recommendations (3 matched shades)
+    """
     classifier = EnhancedSkinToneClassifier()
     result = classifier.create_user_profile(skin_pixels, user_name)
     # ensure `result` contains only JSON-serializable types
