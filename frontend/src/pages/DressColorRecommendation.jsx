@@ -1,14 +1,53 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import DressColorDisplay from "../components/DressColorDisplay";
 
-function DressColorRecommendation({ onReset }) {
+function DressColorRecommendation({ analysisResults: analysisResultsProp, userName: userNameProp, onReset }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get analysis results and username from location state
-  const { userName, results: analysisResults } = location.state || {};
+  // Prefer navigation state, then props from App/TVListener, then sessionStorage
+  const pickData = () => {
+    const stateData = location.state || {};
+    if (stateData.results) return stateData;
+
+    if (analysisResultsProp) {
+      return {
+        userName: userNameProp || stateData.userName,
+        results: analysisResultsProp,
+      };
+    }
+
+    const saved = sessionStorage.getItem("analysisResults");
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (err) {
+        console.error("Failed to parse saved analysisResults", err);
+      }
+    }
+    return {};
+  };
+
+  const [pageData, setPageData] = useState(pickData);
+
+  useEffect(() => {
+    const updated = pickData();
+    setPageData((prev) => {
+      if (prev.userName === updated.userName && prev.results === updated.results) return prev;
+      return updated;
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state, analysisResultsProp, userNameProp]);
+
+  const { userName, results: analysisResults } = pageData;
+
+  useEffect(() => {
+    if (analysisResults && userName) {
+      sessionStorage.setItem("analysisResults", JSON.stringify({ userName, results: analysisResults }));
+    }
+  }, [analysisResults, userName]);
 
   // If no analysis results → show message
   if (!analysisResults) {
@@ -21,7 +60,7 @@ function DressColorRecommendation({ onReset }) {
             Go to <span className="font-black text-pink-600">Full Analysis</span> to capture a photo first!
           </p>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/capture")}
             className="mt-6 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-4 px-8 rounded-2xl font-black text-xl shadow-lg transform hover:scale-105 transition-all"
           >
             Start Analysis
@@ -108,15 +147,12 @@ function DressColorRecommendation({ onReset }) {
       {/* Reset Button */}
       {/* Buttons */}
       <div className="flex flex-col md:flex-row gap-4 mt-6 justify-center">
-      <button
-  
-  onClick={() =>
-    navigate("/results/tryon", )
-  }
-  className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
->
-  👗 Try On Colors
-</button>
+        <button
+          onClick={() => navigate("/results/tryon", { state: { userName, results: analysisResults } })}
+          className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
+        >
+          👗 Try On Colors
+        </button>
 
         <button
           onClick={onReset}

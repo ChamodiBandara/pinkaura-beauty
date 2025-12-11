@@ -269,16 +269,70 @@
 // export default SkinAnalysis
 
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import SkinToneDisplay from '../components/SkinToneDisplay'
 
 function SkinAnalysisPage() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { userName, capturedImage, results } = location.state || {}
+  
+  // Try location.state first, then sessionStorage
+  const [pageData, setPageData] = useState(() => {
+    const stateData = location.state || {}
+    console.log('📊 [SkinAnalysis] location.state:', stateData);
+    
+    if (stateData.results && stateData.userName) {
+      console.log('📊 [SkinAnalysis] Using location.state data');
+      return stateData
+    }
+    
+    // Try to restore from sessionStorage
+    const savedData = sessionStorage.getItem('analysisResults')
+    console.log('📊 [SkinAnalysis] sessionStorage raw:', savedData);
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData)
+        console.log('📊 [SkinAnalysis] Parsed sessionStorage:', parsedData);
+        return parsedData
+      } catch (e) {
+        console.error('Failed to parse saved data:', e)
+      }
+    }
+    
+    console.log('📊 [SkinAnalysis] No data found in sessionStorage or location.state');
+    return {}
+  })
 
-  if (!results || !userName || !capturedImage) {
-    navigate('/') // redirect if missing data
-    return null
+  const { userName, capturedImage, results } = pageData
+
+  // Save to sessionStorage when data changes
+  useEffect(() => {
+    if (results && userName) {
+      sessionStorage.setItem('analysisResults', JSON.stringify({
+        userName,
+        results,
+        capturedImageUrl: capturedImage ? 'stored' : null
+      }))
+    }
+  }, [results, userName, capturedImage])
+
+  // If no results, show message instead of redirecting
+  if (!results || !userName) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center">
+          <div className="text-6xl mb-4">🌺</div>
+          <h2 className="text-2xl font-bold text-pink-600 mb-4">No Analysis Data</h2>
+          <p className="text-gray-600 mb-6">Please capture and analyze a photo first.</p>
+          <button
+            onClick={() => navigate('/capture')}
+            className="w-full px-6 py-3 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg"
+          >
+            Go to Camera
+          </button>
+        </div>
+      </div>
+    )
   }
 
   const handleNext = () => {
@@ -289,12 +343,10 @@ function SkinAnalysisPage() {
     <div className="min-h-screen flex flex-col items-center bg-pink-50 p-6">
       <h2 className="text-3xl font-bold text-pink-600 mb-6">🌺 Skin Analysis Results</h2>
 
-      <img
-        src={URL.createObjectURL(capturedImage)}
-        alt="Captured"
-        className="w-64 rounded-lg border-4 border-pink-200 shadow-lg mb-4"
-      />
-      <p className="text-center font-semibold text-gray-700 mb-4">{userName}</p>
+      {/* Photo display removed - TV only shows analysis results */}
+      <p className="text-center font-semibold text-gray-700 mb-6">
+        👤 <span className="text-pink-600">{userName}</span>
+      </p>
 
       <div className="w-full max-w-4xl mb-4">
         <SkinToneDisplay results={results} />
