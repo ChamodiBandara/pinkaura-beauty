@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,18 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.clip-lip-shape {
+  clip-path: polygon(
+    50% 0%, 61% 15%, 75% 15%, 85% 25%, 85% 50%, 
+    75% 75%, 50% 100%, 25% 75%, 15% 50%, 15% 25%, 
+    25% 15%, 39% 15%
+  );
+  transition: transform 0.2s;
 }
+
+.clip-lip-shape:hover {
+  transform: scale(1.1);
+}
+

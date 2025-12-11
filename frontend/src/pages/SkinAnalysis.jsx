@@ -268,8 +268,56 @@
 
 // export default SkinAnalysis
 
+// import { useLocation, useNavigate } from 'react-router-dom'
+// import { useEffect } from 'react'
+// import SkinToneDisplay from '../components/SkinToneDisplay'
+
+// function SkinAnalysisPage() {
+//   const location = useLocation()
+//   const navigate = useNavigate()
+//   const { userName, capturedImage, results } = location.state || {}
+
+//   if (!results || !userName || !capturedImage) {
+//     navigate('/') // redirect if missing data
+//     return null
+//   }
+
+//   const handleNext = () => {
+//     navigate('/lip-colors', { state: { userName, results } })
+//   }
+
+//   return (
+//     <div className="min-h-screen flex flex-col items-center bg-pink-50 p-6"
+//      style={{
+//         backgroundImage: "url('/images/bg25.jpg')",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//       }}
+//     >
+//       <h2 className="text-3xl font-bold text-pink-600 mb-6">Your aura is about to be analyzed</h2>
+
+//       <div className="w-full max-w-4xl mb-4">
+//         <SkinToneDisplay results={results} />
+//       </div>
+
+//       <button
+//         onClick={handleNext}
+//         className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
+//       >
+//         🎨 Next: Lip Colors
+//       </button>
+//     </div>
+//   )
+// }
+
+// export default SkinAnalysisPage
+
+
+// SkinAnalysisPage.jsx
 import { useLocation, useNavigate } from 'react-router-dom'
 import SkinToneDisplay from '../components/SkinToneDisplay'
+
 
 function SkinAnalysisPage() {
   const location = useLocation()
@@ -277,7 +325,7 @@ function SkinAnalysisPage() {
   const { userName, capturedImage, results } = location.state || {}
 
   if (!results || !userName || !capturedImage) {
-    navigate('/') // redirect if missing data
+    navigate('/')
     return null
   }
 
@@ -286,26 +334,72 @@ function SkinAnalysisPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-pink-50 p-6">
-      <h2 className="text-3xl font-bold text-pink-600 mb-6">🌺 Skin Analysis Results</h2>
+    <div
+      className="min-h-screen flex flex-col items-center px-4 py-10"
+      style={{
+        backgroundImage: "url('/images/bg25.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Heading */}
+      <h2 className="text-3xl font-bold text-pink-700 mb-6">
+        Your aura is about to be analyzed
+      </h2>
 
-      <img
-        src={URL.createObjectURL(capturedImage)}
-        alt="Captured"
-        className="w-64 rounded-lg border-4 border-pink-200 shadow-lg mb-4"
-      />
-      <p className="text-center font-semibold text-gray-700 mb-4">{userName}</p>
+      {/* Top Section with image & aura patch */}
+      <div className="relative w-full max-w-3xl flex flex-col items-center mb-12">
 
-      <div className="w-full max-w-4xl mb-4">
+        {/* Girl Illustration Behind Everything */}
+        <img
+          src="/images/bg26.png"
+          alt="Girl Illustration"
+          className="absolute top-0 w-60 opacity-100 pointer-events-none select-none"
+          style={{ zIndex: 4 }}
+        />
+
+       <div
+  className="absolute w-100 h-100 opacity-100"
+  style={{
+    top: "10px",
+    left: "35%", // center horizontally
+    transform: "translateX(-50%)", // adjust for center
+    width: "200px", // circle width
+    height: "200px", // circle height
+    backgroundColor: results.exact_skin_color?.hex,
+    clipPath: "circle(50% at 50% 50%)", // circle shape
+    zIndex: 2,
+  }}
+></div>
+
+        
+      </div>
+
+      {/* Result Cards Section */}
+      <div className="w-full max-w-5xl">
         <SkinToneDisplay results={results} />
       </div>
 
-      <button
-        onClick={handleNext}
-        className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
-      >
-        🎨 Next: Lip Colors
-      </button>
+      {/* Buttons */}
+      <div className="flex flex-col items-center mt-10 gap-4">
+        <button
+              onClick={() => navigate('/enter-name')}
+              className="relative w-full px-60 mt-10 py-2 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 hover:from-pink-500 hover:via-rose-500 hover:to-pink-600 text-white rounded-2xl font-black text-xl shadow-2xl shadow-pink-400/50 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                <span className="relative tracking-wide">Analyze Another</span>
+              <svg className="relative w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
+
+        <button
+          onClick={handleNext}
+          className="px-10 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-lg font-bold shadow-md"
+        >
+          Next : Lip Color
+        </button>
+      </div>
     </div>
   )
 }

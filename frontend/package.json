@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "axios": "^1.13.2",
+    "gl-react": "^5.2.0",
+    "gl-react-dom": "^5.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.6",
+    "react-three-fiber": "^6.0.13",
+    "react-webgl": "^0.1.0",
     "three": "^0.181.2"
   },
   "devDependencies": {
