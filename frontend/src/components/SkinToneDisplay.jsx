@@ -221,7 +221,24 @@
   
 
 function SkinToneDisplay({ results, onReset }) {
-  const { user_name, category, exact_skin_color, undertone_info, ai_validation } = results;
+  // Use actual backend data from enhanced skin_analysis.py
+  const {
+    user_name = 'User',
+    category = {},
+    exact_skin_color = {},
+    undertone_info = {},
+    ai_validation = {},
+    general_classification = {},
+    analysis_metadata = {},
+    lipstick_recommendation = {},
+    dress_color_recommendations = {}
+  } = results || {};
+
+  // Get skin color hex
+  const skinColorHex = exact_skin_color?.hex || '#D4A574';
+
+  // Get RGB values for fallback
+  const rgbColor = exact_skin_color?.rgb || { R: 212, G: 165, B: 116 };
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200 py-6 px-4">
@@ -238,7 +255,9 @@ function SkinToneDisplay({ results, onReset }) {
           <h2 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 bg-clip-text text-transparent mb-2">
             {user_name}'s Beauty Profile ✨
           </h2>
-          <p className="text-pink-400 text-base font-semibold">Your personalized skin tone analysis</p>
+          <p className="text-pink-400 text-base font-semibold">
+            Category: <span className="font-black text-pink-600">#{category?.number || '--'}</span> - <span className="font-black text-pink-600">{category?.name || 'Analyzing...'}</span>
+          </p>
           <div className="h-1 w-48 bg-gradient-to-r from-pink-400 via-rose-300 to-pink-400 rounded-full shadow-lg mt-3 mx-auto"></div>
         </div>
 
@@ -266,11 +285,11 @@ function SkinToneDisplay({ results, onReset }) {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-300 to-rose-300 rounded-xl blur opacity-40"></div>
                   <div
                     className="relative w-full h-24 rounded-xl border-3 border-white shadow-xl"
-                    style={{ backgroundColor: exact_skin_color.hex }}
+                    style={{ backgroundColor: skinColorHex }}
                   />
                 </div>
                 <p className="mt-3 text-xl font-mono font-black bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
-                  {exact_skin_color.hex}
+                  {skinColorHex}
                 </p>
               </div>
 
@@ -286,9 +305,9 @@ function SkinToneDisplay({ results, onReset }) {
                       <p className="text-xs font-bold text-gray-600">Category</p>
                     </div>
                     <p className="text-sm font-black text-pink-600 mt-1">
-                      #{category.number} - {category.name}
+                      #{category?.number || '--'} - {category?.name || 'Determining'}
                     </p>
-                    <p className="text-xs text-gray-600 mt-1.5 leading-snug line-clamp-2">{category.description}</p>
+                    <p className="text-xs text-gray-600 mt-1.5 leading-snug line-clamp-2">{category?.description || 'Analyzing...'}</p>
                   </div>
                 </div>
 
@@ -301,9 +320,11 @@ function SkinToneDisplay({ results, onReset }) {
                       <p className="text-xs font-bold text-gray-600">Undertone</p>
                     </div>
                     <p className="text-sm font-black text-purple-600 mt-1">
-                      {undertone_info.undertone}
+                      {undertone_info?.undertone || 'Unknown'}
                     </p>
-                    <p className="text-xs text-gray-600 mt-1.5 leading-snug line-clamp-2">{undertone_info.description}</p>
+                    <p className="text-xs text-gray-600 mt-1.5 leading-snug line-clamp-2">
+                      {undertone_info?.description || 'Undertone analyzing...'}
+                    </p>
                   </div>
                 </div>
 
@@ -316,14 +337,14 @@ function SkinToneDisplay({ results, onReset }) {
                       <p className="text-xs font-bold text-gray-600">Fitzpatrick</p>
                     </div>
                     <p className="text-sm font-black text-rose-600 mt-1">
-                      Type {category.fitzpatrick}
+                      Type {category?.fitzpatrick || 'N/A'}
                     </p>
                     <p className="text-xs text-gray-600 mt-1.5">Skin sensitivity level</p>
                   </div>
                 </div>
 
                 {/* AI Validation Card */}
-                {ai_validation.validated && (
+                {ai_validation?.validated && (
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-400 to-rose-400 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
                     <div className="relative bg-gradient-to-br from-pink-50 to-rose-50 p-3 rounded-lg border-2 border-pink-200/60 shadow-md">
@@ -332,13 +353,67 @@ function SkinToneDisplay({ results, onReset }) {
                         <p className="text-xs font-bold text-gray-600">AI Verified</p>
                       </div>
                       <p className="text-sm font-black text-pink-600 mt-1">
-                        {Math.round(ai_validation.confidence * 100)}% Sure
+                        {Math.round((ai_validation?.confidence || 0) * 100)}% Sure
                       </p>
                       <p className="text-xs text-gray-600 mt-1.5">AI analysis validated</p>
                     </div>
                   </div>
                 )}
               </div>
+
+              {/* Lipstick summary */}
+              {lipstick_recommendation?.recommendations && (
+                <div className="mt-5 p-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-lg border-2 border-pink-200/60">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">💄</span>
+                    <p className="font-bold text-pink-600">Lipstick Recommendations</p>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 text-sm">
+                    {['nude', 'everyday', 'bold'].map(key => {
+                      const shades = lipstick_recommendation.recommendations?.[key] || []
+                      return (
+                        <div key={key}>
+                          <p className="text-xs text-gray-600 font-bold uppercase">{key}</p>
+                          {shades.slice(0, 2).map((shade, idx) => (
+                            <div key={idx} className="flex items-center gap-2 mt-1">
+                              <span
+                                className="w-4 h-4 rounded-full border border-gray-300"
+                                style={{ backgroundColor: shade.hex || '#ccc' }}
+                              ></span>
+                              <span className="text-gray-700">{shade.name}</span>
+                            </div>
+                          ))}
+                          {shades.length === 0 && <p className="text-gray-500">No shades</p>}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Dress palette snapshot */}
+              {dress_color_recommendations?.best_colors && (
+                <div className="mt-4 p-4 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg border-2 border-amber-200/70">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">👗</span>
+                    <p className="font-bold text-amber-700">Dress Color Highlights</p>
+                    <span className="text-sm text-amber-600 font-semibold">
+                      {dress_color_recommendations.season_name || 'Palette'}
+                    </span>
+                  </div>
+                  <div className="flex gap-2">
+                    {dress_color_recommendations.best_colors.slice(0, 5).map((c, idx) => (
+                      <div key={idx} className="flex-1 text-center">
+                        <div
+                          className="h-8 rounded-md border border-gray-200 shadow-sm"
+                          style={{ backgroundColor: c.hex }}
+                        ></div>
+                        <p className="text-xs text-gray-700 font-semibold mt-1 truncate">{c.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Action Button - Compact */}
               <div className="mt-5">

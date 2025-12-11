@@ -54,21 +54,42 @@
 
 // export default CapturePhotoPage
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import Camera from '../components/Camera'
+import SharedCamera from '../components/SharedCamera'
 import { analyzeSkinTone } from '../services/api'
 
 function CapturePhotoPage() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { userName } = location.state || {}
+  
+  // Try to get userName from location.state or sessionStorage
+  const [userName, setUserName] = useState(() => {
+    return location.state?.userName || sessionStorage.getItem('userName') || ''
+  })
+  
   const [capturedImage, setCapturedImage] = useState(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
 
+  // Save userName to sessionStorage when it changes
+  useEffect(() => {
+    if (userName) {
+      sessionStorage.setItem('userName', userName)
+    }
+  }, [userName])
+
+  // If no userName, prompt user to enter it
   if (!userName) {
-    navigate('/') // redirect to name page if no username
-    return null
+    return (
+      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4">
+          <div className="text-6xl mb-4 text-center">📸</div>
+          <h2 className="text-2xl font-bold text-pink-600 mb-4 text-center">Camera Closed</h2>
+          <p className="text-gray-600 mb-4 text-center">Please use the admin panel on your laptop to capture photos.</p>
+          <p className="text-sm text-gray-500 text-center mt-6">📺 This is the TV Display</p>
+        </div>
+      </div>
+    )
   }
 
   const handleCapture = (imageBlob) => {
@@ -127,7 +148,7 @@ function CapturePhotoPage() {
 
             {/* Camera Component - Flexible */}
             <div className="mt-3 flex-1 flex flex-col">
-              <Camera onCapture={handleCapture} />
+              <SharedCamera onCapture={handleCapture} />
             </div>
 
             {/* Status Indicator - Compact */}

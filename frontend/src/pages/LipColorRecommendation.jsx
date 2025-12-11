@@ -136,28 +136,79 @@
 // }
 
 // export default LipColorRecommendation;
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import LipSwatch from "../components/LipSwatch"; // Reusable lip shape component
 
-function LipColorRecommendation({ onReset }) {
+function LipColorRecommendation({ analysisResults: analysisResultsProp, userName: userNameProp, onReset }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get data from navigation state
-  const { userName, results: analysisResults } = location.state || {};
+  // Helper to consistently choose the freshest data source
+  const pickData = () => {
+    const stateData = location.state || {};
+
+    // 1) If we arrived via navigate(..., { state }), trust it first
+    if (stateData.results) return stateData;
+
+    // 2) If parent passed props (TVListener updates App state), use them
+    if (analysisResultsProp) {
+      return {
+        userName: userNameProp || stateData.userName,
+        results: analysisResultsProp,
+      };
+    }
+
+    // 3) Fallback to sessionStorage (persists across refresh)
+    const savedData = sessionStorage.getItem('analysisResults');
+    if (savedData) {
+      try {
+        return JSON.parse(savedData);
+      } catch (e) {
+        console.error('Failed to parse saved data:', e);
+      }
+    }
+
+    return {};
+  };
+
+  const [pageData, setPageData] = useState(pickData);
+
+  // Keep data in sync when navigation state or parent props change
+  useEffect(() => {
+    const updated = pickData();
+    setPageData((prev) => {
+      // Avoid state churn if nothing changed
+      if (prev.userName === updated.userName && prev.results === updated.results) {
+        return prev;
+      }
+      return updated;
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state, analysisResultsProp, userNameProp]);
+
+  const { userName, results: analysisResults } = pageData
+
+  // Persist the latest good data for hard reloads or direct deep links
+  useEffect(() => {
+    if (analysisResults && userName) {
+      sessionStorage.setItem('analysisResults', JSON.stringify({ userName, results: analysisResults }));
+    }
+  }, [analysisResults, userName]);
 
   // If no analysis data
   if (!analysisResults) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-pink-50">
-        <div className="text-center">
-          <p className="text-xl text-gray-700 mb-4">❌ No analysis data found</p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center">
+          <div className="text-6xl mb-4">💄</div>
+          <h2 className="text-2xl font-bold text-pink-600 mb-4">No Analysis Data</h2>
+          <p className="text-gray-600 mb-6">Please complete a skin analysis first.</p>
           <button
-            onClick={() => navigate("/")}
-            className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
+            onClick={() => navigate("/capture")}
+            className="w-full px-6 py-3 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg"
           >
-            Start New Analysis
+            Go to Camera
           </button>
         </div>
       </div>
@@ -169,12 +220,14 @@ function LipColorRecommendation({ onReset }) {
   // If lipstick data is missing
   if (!lipstickData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-pink-50">
-        <div className="text-center">
-          <p className="text-xl text-gray-700 mb-4">⚠️ No lipstick data available</p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center">
+          <div className="text-6xl mb-4">⚠️</div>
+          <h2 className="text-2xl font-bold text-pink-600 mb-4">No Lipstick Data</h2>
+          <p className="text-gray-600 mb-6">Lipstick recommendations are not available.</p>
           <button
-            onClick={() => navigate("/")}
-            className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
+            onClick={() => navigate("/capture")}
+            className="w-full px-6 py-3 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg"
           >
             Start New Analysis
           </button>

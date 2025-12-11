@@ -38,10 +38,31 @@
 
 
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import TryOn3D from "../components/TryOn3D/TryOn3D";
 import { getShades } from "../api/api";
 
-export default function VirtualTryOnPage() {
+export default function VirtualTryOnPage({ capturedImage, userName: userNameProp, analysisResults: analysisResultsProp }) {
+  const location = useLocation();
+
+  const pickData = () => {
+    const stateData = location.state || {};
+    if (stateData.results) return stateData;
+    if (analysisResultsProp) {
+      return { userName: userNameProp || stateData.userName, results: analysisResultsProp, capturedImage: capturedImage || stateData.capturedImage };
+    }
+    const saved = sessionStorage.getItem("analysisResults");
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (err) {
+        console.error("Failed to parse saved analysisResults", err);
+      }
+    }
+    return stateData;
+  };
+
+  const [pageData] = useState(pickData);
   const [shades, setShades] = useState([]);
   const [currentShade, setCurrentShade] = useState(0);
 
@@ -49,11 +70,18 @@ export default function VirtualTryOnPage() {
     getShades().then(setShades);
   }, []);
 
+  const current = shades[currentShade];
+  const { userName, capturedImage: capturedImageData } = pageData;
+
   return (
     <div className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-br from-[#fcd5ce] to-[#d0bbe4]">
       <h2 className="text-3xl font-bold text-[#b30059] mb-6 text-center">
-        💄 Virtual Lipstick Try-On
+        💄 Virtual Lipstick Try-On {userName ? `for ${userName}` : ""}
       </h2>
+
+      {capturedImageData && (
+        <p className="text-sm text-gray-700 mb-2">Using your captured photo</p>
+      )}
 
       {/* Lipstick Buttons */}
       {shades.length > 0 && (
@@ -75,7 +103,7 @@ export default function VirtualTryOnPage() {
 
       {/* Canvas Container */}
       <div className="w-[680px] h-[520px] border-[3px] border-pink-400 rounded-2xl overflow-hidden flex justify-center items-center shadow-lg">
-        <TryOn3D currentShade={shades[currentShade]} />
+        <TryOn3D currentShade={current} capturedImage={capturedImageData} />
       </div>
     </div>
   );
