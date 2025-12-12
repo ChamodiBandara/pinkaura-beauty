@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Import your pages
 import LandingPage from "./pages/LandingPage";
 import NamePage from "./pages/NamePage";
 import CameraPage from "./pages/CameraPage";
@@ -8,6 +9,10 @@ import SkinAnalysis from "./pages/SkinAnalysis";
 import LipColorRecommendation from "./pages/LipColorRecommendation";
 import DressColorPage from "./pages/DressColorRecommendation";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
+import AdminPage from "./pages/AdminPage";
+
+// ✅ 1. Import the new Listener
+import TVListener from "./components/TVListener";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -22,16 +27,25 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* ✅ 2. Add the Listener HERE (Invisible, but always listening) */}
+     <TVListener 
+  setAnalysisResults={setAnalysisResults} 
+  setCapturedImage={setCapturedImage}
+  setUserName={setUserName}
+/>
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/enter-name" element={<NamePage setUserName={setUserName} />} />
+        <Route path="/admin" element={<AdminPage />} />
+
         <Route
           path="/capture"
           element={
             <CameraPage
               userName={userName}
               setCapturedImage={setCapturedImage}
-              setAnalysisResults={setAnalysisResults}  // ✅ Must pass this
+              setAnalysisResults={setAnalysisResults}
             />
           }
         />
@@ -56,19 +70,25 @@ function App() {
             />
           }
         />
-      <Route
-  path="/results/dress"
-  element={
-    <DressColorPage 
-      analysisResults={analysisResults}
-      userName={userName}
-      onReset={handleReset}
-    />
-  }
-/>
+        <Route
+          path="/results/dress"
+          element={
+            <DressColorPage 
+              analysisResults={analysisResults}
+              userName={userName}
+              onReset={handleReset}
+            />
+          }
+        />
         <Route
           path="/results/tryon"
-          element={<VirtualTryOnPage capturedImage={capturedImage} />}
+          element={
+            <VirtualTryOnPage 
+              capturedImage={capturedImage}
+              analysisResults={analysisResults}
+              userName={userName}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

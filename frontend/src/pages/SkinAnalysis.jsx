@@ -268,65 +268,71 @@
 
 // export default SkinAnalysis
 
-// import { useLocation, useNavigate } from 'react-router-dom'
-// import { useEffect } from 'react'
-// import SkinToneDisplay from '../components/SkinToneDisplay'
-
-// function SkinAnalysisPage() {
-//   const location = useLocation()
-//   const navigate = useNavigate()
-//   const { userName, capturedImage, results } = location.state || {}
-
-//   if (!results || !userName || !capturedImage) {
-//     navigate('/') // redirect if missing data
-//     return null
-//   }
-
-//   const handleNext = () => {
-//     navigate('/lip-colors', { state: { userName, results } })
-//   }
-
-//   return (
-//     <div className="min-h-screen flex flex-col items-center bg-pink-50 p-6"
-//      style={{
-//         backgroundImage: "url('/images/bg25.jpg')",
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundRepeat: "no-repeat",
-//       }}
-//     >
-//       <h2 className="text-3xl font-bold text-pink-600 mb-6">Your aura is about to be analyzed</h2>
-
-//       <div className="w-full max-w-4xl mb-4">
-//         <SkinToneDisplay results={results} />
-//       </div>
-
-//       <button
-//         onClick={handleNext}
-//         className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
-//       >
-//         🎨 Next: Lip Colors
-//       </button>
-//     </div>
-//   )
-// }
-
-// export default SkinAnalysisPage
-
-
-// SkinAnalysisPage.jsx
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import SkinToneDisplay from '../components/SkinToneDisplay'
-
 
 function SkinAnalysisPage() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { userName, capturedImage, results } = location.state || {}
+  
+  // Try location.state first, then sessionStorage
+  const [pageData, setPageData] = useState(() => {
+    const stateData = location.state || {}
+    console.log('📊 [SkinAnalysis] location.state:', stateData);
+    
+    if (stateData.results && stateData.userName) {
+      console.log('📊 [SkinAnalysis] Using location.state data');
+      return stateData
+    }
+    
+    // Try to restore from sessionStorage
+    const savedData = sessionStorage.getItem('analysisResults')
+    console.log('📊 [SkinAnalysis] sessionStorage raw:', savedData);
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData)
+        console.log('📊 [SkinAnalysis] Parsed sessionStorage:', parsedData);
+        return parsedData
+      } catch (e) {
+        console.error('Failed to parse saved data:', e)
+      }
+    }
+    
+    console.log('📊 [SkinAnalysis] No data found in sessionStorage or location.state');
+    return {}
+  })
 
-  if (!results || !userName || !capturedImage) {
-    navigate('/')
-    return null
+  const { userName, capturedImage, results } = pageData
+
+  // Save to sessionStorage when data changes
+  useEffect(() => {
+    if (results && userName) {
+      sessionStorage.setItem('analysisResults', JSON.stringify({
+        userName,
+        results,
+        capturedImageUrl: capturedImage ? 'stored' : null
+      }))
+    }
+  }, [results, userName, capturedImage])
+
+  // If no results, show message instead of redirecting
+  if (!results || !userName) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center">
+          <div className="text-6xl mb-4">🌺</div>
+          <h2 className="text-2xl font-bold text-pink-600 mb-4">No Analysis Data</h2>
+          <p className="text-gray-600 mb-6">Please capture and analyze a photo first.</p>
+          <button
+            onClick={() => navigate('/capture')}
+            className="w-full px-6 py-3 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg"
+          >
+            Go to Camera
+          </button>
+        </div>
+      </div>
+    )
   }
 
   const handleNext = () => {
@@ -334,72 +340,24 @@ function SkinAnalysisPage() {
   }
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center px-4 py-10"
-      style={{
-        backgroundImage: "url('/images/bg25.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Heading */}
-      <h2 className="text-3xl font-bold text-pink-700 mb-6">
-        Your aura is about to be analyzed
-      </h2>
+    <div className="min-h-screen flex flex-col items-center bg-pink-50 p-6">
+      <h2 className="text-3xl font-bold text-pink-600 mb-6">🌺 Skin Analysis Results</h2>
 
-      {/* Top Section with image & aura patch */}
-      <div className="relative w-full max-w-3xl flex flex-col items-center mb-12">
+      {/* Photo display removed - TV only shows analysis results */}
+      <p className="text-center font-semibold text-gray-700 mb-6">
+        👤 <span className="text-pink-600">{userName}</span>
+      </p>
 
-        {/* Girl Illustration Behind Everything */}
-        <img
-          src="/images/bg26.png"
-          alt="Girl Illustration"
-          className="absolute top-0 w-60 opacity-100 pointer-events-none select-none"
-          style={{ zIndex: 4 }}
-        />
-
-       <div
-  className="absolute w-100 h-100 opacity-100"
-  style={{
-    top: "10px",
-    left: "35%", // center horizontally
-    transform: "translateX(-50%)", // adjust for center
-    width: "200px", // circle width
-    height: "200px", // circle height
-    backgroundColor: results.exact_skin_color?.hex,
-    clipPath: "circle(50% at 50% 50%)", // circle shape
-    zIndex: 2,
-  }}
-></div>
-
-        
-      </div>
-
-      {/* Result Cards Section */}
-      <div className="w-full max-w-5xl">
+      <div className="w-full max-w-4xl mb-4">
         <SkinToneDisplay results={results} />
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col items-center mt-10 gap-4">
-        <button
-              onClick={() => navigate('/enter-name')}
-              className="relative w-full px-60 mt-10 py-2 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 hover:from-pink-500 hover:via-rose-500 hover:to-pink-600 text-white rounded-2xl font-black text-xl shadow-2xl shadow-pink-400/50 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden group"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-                <span className="relative tracking-wide">Analyze Another</span>
-              <svg className="relative w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-
-        <button
-          onClick={handleNext}
-          className="px-10 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-lg font-bold shadow-md"
-        >
-          Next : Lip Color
-        </button>
-      </div>
+      <button
+        onClick={handleNext}
+        className="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-bold"
+      >
+        🎨 Next: Lip Colors
+      </button>
     </div>
   )
 }
